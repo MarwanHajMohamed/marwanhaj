@@ -1,0 +1,175 @@
+.navbar-container {
+    width: 200px;
+    height: 100vh;
+    background-color: var(--primary);
+    box-shadow: 10px 0px 60px black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    display: none;
+}
+
+.collapse i{
+    position: absolute;
+    top: 0;
+    margin: 10px 0px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.nav-collapse {
+    width: 200px;
+    height: 100vh;
+    background-color: var(--primary);
+    box-shadow: 10px 0px 60px black;
+    position: fixed;
+    overflow-x: hidden;
+  }
+
+.profile-photo {
+    padding-top: 30px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo img{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+.first-name {
+    padding-top: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.surname {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    margin-bottom: 4vw;
+}
+
+.navbar-list {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar .button {
+    font-size: 1rem;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px 0;
+    background-color: rgb(0, 0, 40);
+    color: white;
+    cursor: pointer;
+    transition:  250ms ease-in-out;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item .active{
+    color: var(--primary);
+    box-shadow: inset 6.5em 0 0 0 white;
+}
+
+.navbar .button:hover {
+    color: var(--primary);
+    box-shadow: inset 6.5em 0 0 0 white;
+}
+
+/* HOME */
+
+.home {
+    display: flex;
+    justify-content: center;
+}
+
+/* ABOUT ME */
+
+.about-me {
+    display: flex;
+    justify-content: center;
+}
+
+/* RESUME */
+
+.resume {
+    display: flex;
+    justify-content: center;
+}
+
+/* PORTFOLIO */
+
+.projects {
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTACT */
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.socials {
+    position: absolute;
+    bottom: 10px;
+}
+
+.nav-collapse .socials i {
+    color: white;
+    font-size: 20px;
+    margin-left: 90px;
+}
+
+.nav-collapse .socials i:hover{
+  color: var(--gold);
+  cursor: pointer;
+}
+
+@media (max-width: 820px) {
+
+    .nav-collapse {
+        visibility: hidden;
+        opacity: 0;
+        /* transition: all 0.5s ease-in-out; */
+      }
+
+    .nav-collapse.show {
+        visibility: visible;
+        opacity: 1;
+        z-index: 10;
+      }
+
+    .collapse,
+    .collapse i {
+        display: block;
+    }
+}

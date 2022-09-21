@@ -1,0 +1,156 @@
+.page-container {
+    margin-left: 200px;
+    height: 35vw;
+    background-color: var(--secondary);
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 7rem;
+    margin: 150px 60px;
+    position: absolute;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.title {
+    margin: 0 55px;
+    padding-top: 24vw;
+    display: flex;
+    font-size: 3rem;
+    color: black;
+}
+
+.description-wrapper {
+    margin-left: 30px;
+}
+
+.description {
+    display: inline-flex;
+}
+
+.dynamic-txts {
+    color: var(--gold);
+    margin: 0 25px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-family: "Source c#Code Pro", monospace;
+    font-weight: 100;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 100px;
+}
+
+.circle {
+    background-color: white;
+    color: var(--gold);
+    padding: 5px 7px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.circle:hover {
+    background-color: var(--gold);
+    cursor: pointer;
+}
+
+.fa-envelope {
+  color: var(--gold);
+}
+
+.circle:hover .fa-envelope{
+  color: white;
+}
+
+.email-text:hover{
+    cursor: default;
+}
+
+  @media (max-width: 1230px) {
+    .page-container {
+    height: 45vw;
+    }
+
+    .email {
+        transform: translateY(30px);
+    }
+
+    .title {
+        padding-top: 30vw;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .page-container {
+        height: 50vw;
+    }
+
+    .title {
+        padding-top: 25vw;
+    }
+
+    .logo {
+    margin: 40px 60px;
+
+    }
+
+    .email {
+        position: absolute;
+        top: 40vw;
+        left: 250px;
+    }
+  }
+  
+  @media (max-width: 820px) {
+    .page-container {
+        margin-left: 35px;
+    }
+
+    .email {
+        left: 85px;
+    }
+    
+  }
+
+  @media (max-width: 700px) {
+    .title {
+        padding-top: 30vw;
+    }
+    
+  }
+
+  @media (max-width: 653px) {
+    .page-container {
+        height: 60vw;
+    }
+
+    .email {
+        top: 48vw;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .page-container {
+        height: 65vw;
+    }
+
+    .logo {
+        font-size: 4rem;
+    }
+
+    .title {
+        padding-top: 25vw;
+    }
+  }
+
+  @media (max-width: 470px) {
+    .title {
+        padding-top: 30vw;
+        font-size: 2rem;
+    }
+  }

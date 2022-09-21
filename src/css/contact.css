@@ -1,0 +1,16 @@
+.contact-page-container {
+    width: auto;
+    margin-left: 200px;
+    background-color: var(--primary);
+    padding-top: 40px;
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    width: 300px;
+    border-bottom: 2px solid white;
+    margin: 0 60px;
+}
+
