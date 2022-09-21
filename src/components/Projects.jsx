@@ -33,11 +33,12 @@ const Slideshow = ({ imgs }) => {
   return (
     <div className="slideshow">
         <button onClick={prev} className='prev'>
-        <i class="fa-solid fa-chevron-left" />
+          <i class="fa-solid fa-chevron-left" />
         </button>
-      <img src={imgs[index]} alt='img' className="mainImg" />
+        <img src={imgs[index]} alt='img' className="mainImg" />
+        {/* <img src={imgs[index]} alt='img' className="largeImg" /> */}
         <button onClick={next} className='next'>
-        <i class="fa-solid fa-chevron-right" />
+          <i class="fa-solid fa-chevron-right" />
         </button>
     </div>
   )
