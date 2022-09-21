@@ -90,6 +90,8 @@
         /* margin-top: 20px; */
         margin: 30px 0;
         box-shadow: 0 0 0;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
     }
   .resume-title {
     width: 200px;
