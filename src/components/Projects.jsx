@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import '../css/projects.css'
+import Modal from './Modal'
 
 import {useState} from 'react';
 
@@ -30,17 +31,23 @@ const Slideshow = ({ imgs }) => {
     }
   }
 
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <div className="slideshow">
+    <button className="slideshow">
         <button onClick={prev} className='prev'>
           <i class="fa-solid fa-chevron-left" />
         </button>
-        <img src={imgs[index]} alt='img' className="mainImg" />
-        {/* <img src={imgs[index]} alt='img' className="largeImg" /> */}
+        <img src={imgs[index]} alt='img' className="mainImg"  onClick={() => setIsOpen(true)}/>
+        <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+          <div className='largeImg-container'>
+            <img src={imgs[index]} alt='img' className="largeImg" />
+          </div>
+        </Modal>
         <button onClick={next} className='next'>
           <i class="fa-solid fa-chevron-right" />
         </button>
-    </div>
+    </button>
   )
 }
 

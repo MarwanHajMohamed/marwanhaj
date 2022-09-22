@@ -2,6 +2,9 @@
     width: auto;
     margin-left: 200px;
     padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .projects-title {
@@ -31,9 +34,10 @@
 .slideshow {
     display: flex;
     justify-content: center;
-    /* height: 400px; */
     align-items: center;
     position: relative;
+    background-color: transparent;
+    border: 0;
 }
 
 .mainImg {
@@ -43,7 +47,17 @@
     transition: 100ms ease-in-out;
 }
 
-.slideshow button {
+.largeImg {
+    border-radius: 10px;
+    width: 1300px;
+    box-shadow: 0 0 20px black;
+    transition: 100ms ease-in-out;
+    animation: fade 500ms;
+    margin-right: 200px;
+}
+
+.slideshow .prev,
+.slideshow .next {
     border: 0;
     background-color: transparent;
     font-size: 2rem;
@@ -60,15 +74,42 @@
     margin-top: 20px;
 }
 
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1355px) {
+    .largeImg {
+        width: 1000px;
+    }
+}
+
 @media (max-width: 1200px) {
     .mainImg {
         height: 300px;
     }
 }
 
+@media (max-width: 1050px) {
+    .largeImg {
+        width: 850px;
+    }
+}
+
 @media (max-width: 950px) {
     .mainImg {
         height: 200px;
+    }
+}
+
+@media (max-width: 900px) {
+    .largeImg {
+        width: 700px;
     }
 }
 
@@ -84,7 +125,17 @@
     .slideshow button {
         font-size: 1.3rem;
     }
-  }
+
+    .largeImg {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 740px) {
+    .largeImg {
+        width: 600px;
+    }
+}
 
   @media (max-width: 700px) {
     .project-description {
@@ -97,8 +148,56 @@
     }
   }
 
+@media (max-width: 640px) {
+    .largeImg {
+        width: 560px;
+    }
+}
+
+@media (max-width: 590px) {
+    .largeImg {
+        width: 530px;
+    }
+}
+
   @media (max-width: 580px) {
     .mainImg {
         height: 100px;
     }
   }
+
+  @media (max-width: 550px) {
+    .largeImg {
+        width: 500px;
+    }
+}
+
+@media (max-width: 520px) {
+    .largeImg {
+        width: 460px;
+    }
+}
+
+@media (max-width: 480px) {
+    .largeImg {
+        width: 400px;
+    }
+}
+
+@media (max-width: 420px) {
+    .largeImg {
+        width: 360px;
+    }
+}
+
+@media (max-width: 390px) {
+    .largeImg {
+        width: 320px;
+    }
+}
+
+@media (max-width: 348px) {
+    .largeImg {
+        width: 290px;
+    }
+}
