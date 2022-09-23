@@ -108,7 +108,7 @@ export default function Navbar() {
                             </li> */}
                         </div>
                     </div>
-                    <a href="https://www.linkedin.com/in/marwan-haj-mohamed-305578218/" className="socials">
+                    <a href="https://www.linkedin.com/in/marwan-haj-mohamed-305578218/" target="_blank"  rel="noopener noreferrer" className="socials">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
 

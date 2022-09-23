@@ -65,7 +65,7 @@ function Projects() {
             BTM1, BTM2, BTM3
           ]}
         />
-        <a href="http://www.bruneltalentmarketplace.com/" className="BTMLink">Brunel Talent Marketplace</a>
+        <a href="http://www.bruneltalentmarketplace.com/" target="_blank"  rel="noopener noreferrer" className="BTMLink">Brunel Talent Marketplace</a>
     </div>
   )
 }

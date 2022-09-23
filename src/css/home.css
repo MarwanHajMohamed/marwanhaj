@@ -4,6 +4,13 @@
     background-color: var(--secondary);
 }
 
+.laptop {
+    position: absolute;
+    height: 35vw;
+    object-fit: cover;
+    width: 85.91vw;
+}
+
 .logo {
     font-family: 'Dancing Script', cursive;
     font-size: 7rem;

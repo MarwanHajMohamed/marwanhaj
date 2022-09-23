@@ -79,6 +79,12 @@
     padding-bottom: 40px;
 }
 
+.grade {
+    color: red;
+    font-weight: 700;
+    /* justify-content: center; */
+}
+
 @media (max-width: 820px) {
     .resume-page-container {
         margin-left: 35px;

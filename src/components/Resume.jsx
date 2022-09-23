@@ -34,6 +34,36 @@ function Resume() {
             </div>
             <div className="cv-education">
                 <div className="education-title">
+                    Brunel University Level 1
+                </div>
+                <div className="education">
+                    <div className='content-1'>(2021-2022)</div> 
+                    <div className="content-2">Grades:</div>
+                </div>
+                <ul>
+                    <li className="level-1-results">
+                        CS1809 Software Design: <span className='grade'>A*</span>
+                    </li>
+                    <li className="level-1-results">
+                        CS1811 Fundamental Programming Assessment: <span className='grade'>A+</span>
+                    </li>
+                    <li className="level-1-results">
+                        CS1810 Software Implementation Event: <span className='grade'>A+</span>
+                    </li>
+                    <li className="level-1-results">
+                        CS1004 Information Systems and Organisations: <span className='grade'>A+</span>
+                    </li>
+                    <li className="a-level-results">
+                        CS1803 Group Project Reflection: <span className='grade'>A</span>
+                    </li>
+                    <li className="level-1-results">
+                        CS1005 Logic and Computation: <span className='grade'>A</span>
+                    </li>
+                    <li className="level-1-results">
+                        CS1805 Data and Information: <span className='grade'>C-</span>
+                    </li>
+                </ul>
+                <div className="education-title">
                     Albemarle Independent College
                 </div>
                 <div className="education">
@@ -41,16 +71,16 @@ function Resume() {
                     <div className="content-2">A-Levels:</div>
                     <ul>
                         <li className="a-level-results">
-                            Arabic - A
+                            Arabic: <span className='grade'>A</span>
                         </li>
                         <li className="a-level-results">
-                            Maths - B
+                            Maths: <span className='grade'>B</span>
                         </li>
                         <li className="a-level-results">
-                            Economics - B
+                            Economics: <span className='grade'>B</span>
                         </li>
                         <li className="a-level-results">
-                            Computer Science - B
+                            Computer Science: <span className='grade'>B</span>
                         </li>
                     </ul>
                 </div>
