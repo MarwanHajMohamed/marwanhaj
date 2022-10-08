@@ -2,7 +2,6 @@
     width: 200px;
     height: 100vh;
     background-color: var(--primary);
-    /* box-shadow: 10px 0px 60px black; */
     position: fixed;
     top: 0;
     left: 0;
@@ -139,10 +138,8 @@
 }
 
 .socials {
-    display: flex;
-    margin: 75px 0;
-    /* position: absolute;
-    bottom: 170px; */
+    position: absolute;
+    bottom: 10px;
 }
 
 .nav-collapse .socials i {

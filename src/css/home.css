@@ -4,13 +4,6 @@
     background-color: var(--secondary);
 }
 
-.laptop {
-    position: absolute;
-    height: 35vw;
-    object-fit: cover;
-    width: 85.91vw;
-}
-
 .logo {
     font-family: 'Dancing Script', cursive;
     font-size: 7rem;
@@ -45,10 +38,11 @@
     font-weight: 100;
 }
 
-.email {
+.page-container .email {
     display: flex;
     align-items: center;
     position: absolute;
+    transition:  250ms ease-in-out;
     right: 100px;
 }
 
@@ -58,11 +52,14 @@
     padding: 5px 7px;
     border: 1px solid black;
     border-radius: 50%;
+    transition:  250ms ease-in-out;
     margin-right: 8px;
 }
 
 .circle:hover {
-    background-color: var(--gold);
+    box-shadow: inset 2em 0 0 0 var(--gold);
+    /* background-color: var(--gold); */
+
     cursor: pointer;
 }
 
@@ -83,7 +80,7 @@
     height: 45vw;
     }
 
-    .email {
+    .page-container .email {
         transform: translateY(30px);
     }
 
@@ -106,7 +103,7 @@
 
     }
 
-    .email {
+    .page-container .email {
         position: absolute;
         top: 40vw;
         left: 250px;
@@ -118,7 +115,7 @@
         margin-left: 35px;
     }
 
-    .email {
+    .page-container .email {
         left: 85px;
     }
     
@@ -136,7 +133,7 @@
         height: 60vw;
     }
 
-    .email {
+    .page-container .email {
         top: 48vw;
     }
   }

@@ -7,7 +7,6 @@ import Marwan from '../css/images/MarwanHajMohamed.png'
 
 export default function Navbar() {
 
-    const [click, setClick] = useState(false)
     const [toggle, setToggle] = useState(false)
 
     const toggleNav = () => {
@@ -37,7 +36,7 @@ export default function Navbar() {
                             Haj Mohamed
                         </div>
 
-                        <div className={click ? "navbar-list active" : "navbar-list"}>
+                        <div className={"navbar-list"}>
                             <li className='nav-item'>
                                 <div className="home">
                                     <Link 
@@ -86,7 +85,7 @@ export default function Navbar() {
                                     spy={true} 
                                     smooth={true} 
                                     duration={500} 
-                                    offset={-25}
+                                    offset={15}
                                     onClick={toggleNav}
                                     className="button">
                                         Resume
@@ -108,8 +107,8 @@ export default function Navbar() {
                             </li> */}
                         </div>
                     </div>
-                    <a href="https://www.linkedin.com/in/marwan-haj-mohamed-305578218/" target="_blank"  rel="noopener noreferrer" className="socials">
-                        <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/marwan-haj-mohamed-305578218/" className="socials">
+                        <i className="fa-brands fa-linkedin"></i>
                     </a>
 
                 </div>
