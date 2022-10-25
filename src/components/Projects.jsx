@@ -8,6 +8,7 @@ import BTM2 from '../css/images/BTM2.png'
 import BTM3 from '../css/images/BTM3.png'
 
   const closeModalButton = document.querySelectorAll('[data-close-button]')
+  const openModalButton = document.querySelectorAll('[data-modal-target]')
   const overlay = document.getElementById('overlay')
   const modal = document.getElementById('modal')
 
@@ -16,6 +17,13 @@ import BTM3 from '../css/images/BTM3.png'
       const modal = button.closest('.modal')
       closeModal(modal)
     })
+})
+
+openModalButton.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
 })
 
 function closeModal(modal) {
@@ -83,7 +91,7 @@ function Projects() {
             <button onClick={prev} className='prev'>
               <i class="fa-solid fa-chevron-left" />
             </button>
-            <img src={imgs[index]} alt='img' className="mainImg" onClick={() => openModal(modal)} />
+            <img data-modal-target='#modal' src={imgs[index]} alt='img' className="mainImg" />
             <button onClick={next} className='next'>
               <i class="fa-solid fa-chevron-right" />
             </button>

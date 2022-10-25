@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 const Mailto = ({ email, subject, body }) => {
     return (

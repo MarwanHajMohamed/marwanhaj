@@ -10,29 +10,58 @@ function Resume() {
       </div>
       
       <div className="resume-container">
-        <div className="cv-title">
-           Marwan Haj Mohamed
+        <div className="cv-title-container">
+            <div className="cv-title">
+                Marwan Haj Mohamed
+            </div>
+            <div className="email">
+              <div className="circle">
+                <Mailto email='marwan.khaj@hotmail.com'></Mailto>
+              </div>
+              <div className="email-text">
+                marwan.khaj@hotmail.com
+              </div>
+            </div>
         </div>
+        
         <div className="sections">
             <div className="cv-section">
                 <div className="summary-section">
                     <div className="summary-title">Summary</div>
                     <ul className="summary">
                         <li>
-                            Experienced working in web technologies such as React, HTML, JavaScript and CSS while 
-                            developing Brunel Talent Marketplace BTM Project.
+                            Experienced working in web technologies such as <span style={{color: 'black'}}>ReactJS, 
+                            HTML, JavaScript</span> and 
+                            <span style={{color: 'black'}}> CSS</span> while 
+                            developing <span style={{color: 'black'}}> Brunel Talent Marketplace (BTM) </span>Project.
                         </li>
                         <li>
-                            Experienced working with Java while developing an Airport Booking system during my 
-                            first-year programming module which I achieved a grade A+ in.
+                        	Developed an airport booking system during my first year at university using 
+                            <span style={{color: 'black'}}> Java</span>.
                         </li>
                         <li>
-                            Able to work in a fast-paced environment, delivering a working product weekly to the 
-                            client during my time at BTM.
+                        	Basic backend knowledge using <span style={{color: 'black'}}> Express</span> to connect 
+                            to an <span style={{color: 'black'}}>SQL database</span>.
                         </li>
                         <li>
-                            As a team facilitator in my first-year programming module project, I lead my team
-                            to create a working Airport booking system.
+                        	Advanced knowledge in <span style={{color: 'black'}}>Agile</span> methodology whilst developing the BTM website.
+                        </li>
+                        <li>
+                        	Good understanding of <span style={{color: 'black'}}>Waterfall</span> methodology developed 
+                            during the implementation of the airport system in my first year.
+                        </li>
+                        <li>
+                        	Enhanced my <span style={{color: 'black'}}>problem-solving</span> skills by individually 
+                            developing a personal portfolio website which showcases my skills, projects and more.
+                        </li>
+                        <li>
+                        	Natural ability to <span style={{color: 'black'}}>communicate</span> with the customer 
+                            through <span style={{color: 'black'}}>listening</span> and 
+                            <span style={{color: 'black'}}> understanding</span> their ideas and requirements
+                        </li>
+                        <li>
+                        	Demonstrated my ability to <span style={{color: 'black'}}>lead</span> a team of students in 
+                            our university group project
                         </li>
                     </ul>
                 </div>
@@ -40,32 +69,57 @@ function Resume() {
                 <div className="education-section">
                     <div className="education-title">Education</div>
                     <div className="brunel-university">
-                        <div className="brunel-title">Brunel University Level 1</div>
-                        <div className="date">(2021-2022)</div>
-                        <div className="grades">Grades:</div>
-                        <ul className="brunel-grades">
-                            <li>
-                                CS1809 Software Design: <span>A*</span>
-                            </li>
-                            <li>
-                                CS1811 Fundamental Programming Assessment: <span>A+</span>
-                            </li>
-                            <li>
-                                CS1810 Software Implementation Event: <span>A+</span>
-                            </li>
-                            <li>
-                                CS1004 Information Systems and Organisations: <span>A+</span>
-                            </li>
-                            <li>
-                                CS1803 Group Project Reflection: <span>A</span>
-                            </li>
-                            <li>
-                                CS1005 Logic and Computation: <span>A</span>
-                            </li>
-                            <li>
-                                CS1805 Data and Information: <span>C-</span>
-                            </li>
-                        </ul>
+                        <div className="year-2">
+                        <div className="brunel-title">Brunel University Level 2</div>
+                            <div className="date">(2022-2023)</div>
+                            <div className="grades">Modules:</div>
+                            <ul className="brunel-grades">
+                                <li>
+                                	Software Development and Management
+                                </li>
+                                <li>
+                                	Year 2 Group Project
+                                </li>
+                                <li>
+                                	Usability Engineering
+                                </li>
+                                <li>
+                                	Algorithms and their Applications
+                                </li>
+                                <li>
+                                	Networks and Operating Systems
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="year-1">
+                            <div className="brunel-title">Brunel University Level 1</div>
+                            <div className="date">(2021-2022)</div>
+                            <div className="grades">Grades:</div>
+                            <ul className="brunel-grades">
+                                <li>
+                                    Software Design: <span>A*</span>
+                                </li>
+                                <li>
+                                    Fundamental Programming Assessment: <span>A+</span>
+                                </li>
+                                <li>
+                                    Software Implementation Event: <span>A+</span>
+                                </li>
+                                <li>
+                                     Systems and Organisations: <span>A+</span>
+                                </li>
+                                <li>
+                                    Group Project Reflection: <span>A</span>
+                                </li>
+                                <li>
+                                    Logic and Computation: <span>A</span>
+                                </li>
+                                <li>
+                                    Data and Information: <span>C-</span>
+                                </li>
+                            </ul>
+                        </div>
+                       
                     </div>
                     <div className="albemarle-college">
                         <div className="albemarle-title">Albemarle Independent College</div>
@@ -95,43 +149,87 @@ function Resume() {
                 </div>
 
                 <div className="work-experience">
-                    <div className="work-experience-title">Work Experience</div>
+                    <div className="relevant-work-experience-title">Relevant Work Experience</div>
                     <div className="btm-section">
                         <div className="btm-title">BrunelTalentMarketplace.com (BTM)</div>
                         <div className="date">(July-September 2022)</div>
                         <ul className="btm">
                             <li>
-                                Working in a fast-paced, weekly delivery environment (Agile environment).
+                            	I was asked to work with a team to develop the front-end side of the website.
                             </li>
                             <li>
-                                Working with a team to develop the front-end side of <span />
-                                <a href="http://www.bruneltalentmarketplace.com/">Bruneltalentmarketplace</a>.
+                            	Brainstormed different ideas for the design of the website by researching the 
+                                competition and evaluating their strengths and weaknesses.
                             </li>
                             <li>
-                                Delivering working user stories given by the user before the deadline is met.
+                            	Used ReactJS, CSS, HTML and JavaScript languages to code the front-end.
                             </li>
                             <li>
-                                Developing new skills in Figma, ReactJS, JavaScript, CSS and HTML.
+                            	Developed my communication skills through working in a small team and understanding the customer’s requirements.
+                            </li>
+                            <li>
+                            	Improved my time-management by meeting deadlines set by the customer to produce a working prototype of 
+                                the website each sprint.
                             </li>
                         </ul>
                     </div>
 
+                </div>
+
+                <div className="project-work">
                     <div className="portfolio-section">
+                        <div className="project-work-title">Project Work</div>
                         <div className="portfolio-title">Marwanhaj.com</div>
                         <div className="date">(September 2022)</div>
                         <ul className="portfolio">
                             <li>
-                            	Developed a personal portfolio website using ReactJS.
+                                Developed a personal portfolio website to showcase my projects, skills and CV.
                             </li>
                             <li>
-                            	Gained more knowledge about React, CSS and JS.
+                                Researched multiple portfolio websites to finalise a design for my project.
                             </li>
                             <li>
-                            	Enhanced my research and problem-solving skills.
+                                Produced the final website using ReactJS, CSS, HTML and JavaScript.
+                            </li>
+                            <li>
+                                Gained more knowledge about CSS by making the website mobile-friendly, responsive for any size of screen.
+                            </li>
+                            <li>
+                                As I was working on this project independently, I improved my creativity and independent work by solely 
+                            researching designs and ideas for the layout of the website.
                             </li>
                         </ul>
                     </div>
 
+                    <div className="year-1-project">
+                        <div className="year-1-title">Year 1 Airport Simulation Project</div>
+                        <div className="date">(September 2022)</div>
+                        <ul className="year-1-description">
+                            <li>
+                                Our group project involved planning, designing, implementing and testing a fully functional 
+                                airport booking system.
+                            </li>
+                            <li>
+                                My team and I each came up with a design for the program, which we later on agreed on one 
+                                to use whilst implementing.
+                            </li>
+                            <li>
+                                Used Java to complete the project.
+                            </li>
+                            <li>
+                                As I was working on this project independently, I improved my creativity and independent work by solely 
+                                researching designs and ideas for the layout of the website.
+                            </li>
+                            <li>
+                                Organised regular meetings with each other to discuss the difficulties and how to overcome them as a team. 
+                                This enhanced my communication skills as well as my teamwork.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="work-experience">
+                    <div className="other-work-experience-title">Other Work Experience</div>
                     <div className="ata-section">
                         <div className="ata-title">Associate Teaching Assistant (ATA)</div>
                         <div className="date">(Present)</div>
@@ -140,10 +238,13 @@ function Resume() {
                             	Developed communication skills with students.
                             </li>
                             <li>
-                            	Improved my teaching skills by answering numerous questions given by students.
+                            	Improved my teaching skills by answering difficult questions given by students.
                             </li>
                             <li>
                             	Organised my time between self-learning, teaching and attending lectures and labs.
+                            </li>
+                            <li>
+                            	Gained patience when working with students as they are inexperienced in their first year.
                             </li>
                         </ul>
                     </div>
@@ -160,203 +261,41 @@ function Resume() {
                             </li>
                         </ul>
                     </div>
-
-                </div>
-            </div>
-
-            <div className="profile-section">
-                <div className="personal-info">
-                    <div className="personal-info-title">Personal Info</div>
-                    <div className="email-container">
-                        <div className="email-title">Email</div>
-                        <div className="email-info">
-                            <div className="circle">
-                                <Mailto email='2017159@brunel.ac.uk'>
-                                </Mailto>
-                            </div>
-                            <div className="email">marwan.khaj@hotmail.com</div>
-                        </div>
-
-                    </div>
-                    <div className="phone">
-                        <div className="phone-title">Phone</div>
-                        <div className="phone-number">07505822779</div>
-                    </div>
-                </div>
-
-                <div className="skills">
-                    <div className="skills-title">Skills</div>
-                    <div className="skill-name">
-                        <div className="react">
-                            React
-                        </div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div className="skill-name">
-                        <div className="js">
-                            JavaScript
-                        </div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div className="skill-name">
-                        <div className="css">
-                            CSS
-                        </div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div className="skill-name">
-                        <div className="html">
-                            HTML
-                        </div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div className="skill-name">
-                        <div className="figma">
-                            Figma
-                        </div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div className="skill-name">
-                        <div className="java">
-                            Java
-                        </div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div className="skill-name">
-                        <div className="leadership">
-                            Leadership
-                        </div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div className="skill-name">
-                        <div className="teamwork">
-                            Teamwork
-                        </div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div className="skill-name">
-                        <div className="quick-learner">
-                            Quick Learner
-                        </div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="languages">
-                    <div className="languages-title">Languages</div>
-                    <div className="language-name">
-                        <div className="arabic">Arabic</div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-
-                    <div className="language-name">
-                        <div className="english">English</div>
-                        <div className="stars">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                        </div>
-                    </div>
                 </div>
 
                 <div className="hobbies">
                     <div className="hobbies-title">Hobbies</div>
-                    <div className="piano">Piano</div>
-                    <div className="football">Football</div>
-                    <div className="gym">Gym</div>
-                    <div className="swimming">Swimming</div>
+                    <div className="hobbies-description">
+                        Outside of work and study, I am a very active person who enjoys playing football, going to the gym, 
+                        playing the piano and improving my chess skills everyday. I have achieved many trophies and medals 
+                        with my previous football team, helping them score goals, assist my teammates and 
+                        improve the team as a whole.
+                    </div>
                 </div>
 
                 <div className="references">
-                    <div className="reference-title">References</div>
-                    <div className="email-info">
-                        <div className="circle">
-                            <Mailto email='alan.edwin.serrano-rico@brunel.ac.uk'>
-                            </Mailto>
+                    <div className="references-title">References</div>
+                    <div className="reference-container">
+                        <div className="email">
+                            <div className="circle">
+                                <Mailto email='Alan.Edwin.Serrano-Rico@brunel.ac.uk'></Mailto>
+                            </div>
+                            <div className="reference">
+                                Alan Serrano-Rico, Director of BTM 
+                            </div>
                         </div>
-                        <div className="reference-1">Alan Serrano Rico, Director of BTM</div>
-                    </div>
-                    <div className="email-info">
-                        <div className="circle">
-                            <Mailto email='yongmin.Li@brunel.ac.uk'>
-                            </Mailto>
-                        </div>
-                        <div className="reference-1">Yongmin Li, Personal Tutor</div>
+                        <div className="email">
+                            <div className="circle">
+                                <Mailto email='Yongmin.Li@brunel.ac.uk'></Mailto>
+                            </div>
+                            <div className="reference">
+                                Yongmin Li, Personal Tutor
+                            </div>
+                        </div>                    
                     </div>
                 </div>
             </div>
         </div>
-        
       </div>
     </div>
   )
