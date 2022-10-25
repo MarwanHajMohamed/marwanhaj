@@ -79,6 +79,10 @@
     font-size: calc(0.3rem + 0.3rem + 1vmin);
 }
 
+.year-1-description {
+    margin-top: 0;
+}
+
 .brunel-grades,
 .albemarle-grades {
     padding-bottom: 20px;

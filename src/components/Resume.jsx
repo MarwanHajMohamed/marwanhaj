@@ -203,7 +203,7 @@ function Resume() {
 
                     <div className="year-1-project">
                         <div className="year-1-title">Year 1 Airport Simulation Project</div>
-                        <div className="date">(September 2022)</div>
+                        <div className="date">(December 2021- April 2022)</div>
                         <ul className="year-1-description">
                             <li>
                                 Our group project involved planning, designing, implementing and testing a fully functional 
