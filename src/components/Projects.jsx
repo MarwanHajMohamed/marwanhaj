@@ -87,6 +87,7 @@ function Projects() {
               Here are some of the projects I worked on:
           </div>
           
+          
           <div className="slideshow" > 
             <button onClick={prev} className='prev'>
               <i class="fa-solid fa-chevron-left" />
@@ -96,6 +97,7 @@ function Projects() {
               <i class="fa-solid fa-chevron-right" />
             </button>
           </div>
+          
 
           <a href="http://www.bruneltalentmarketplace.com/" className="BTMLink">Brunel Talent Marketplace</a>
       </div>

@@ -24,7 +24,6 @@
     background-color: var(--secondary);
     height: 400px;
     border-radius: 10px;
-    box-shadow: 0 8px 10px 0 black;
 }
 
 .slideshow {
@@ -36,14 +35,16 @@
 
 .mainImg {
     height: 400px;
+    max-width: 900px;
     border-radius: 10px;
-    box-shadow: 0 8px 10px 0 black;
+    box-shadow: 0 3px 5px 0 black;
 }
 
 .slideshow button {
     border: 0;
     background-color: transparent;
     font-size: 2rem;
+    transition: 100ms ease-in-out;
 }
 
 .slideshow button:hover {
@@ -131,6 +132,9 @@ body.active {
   }
 
 @media (max-width: 1200px) {
+    .slideshow-container {
+        height: 350px;
+    }
     .mainImg {
         height: 300px;
     }
@@ -152,6 +156,9 @@ body.active {
 }
 
 @media (max-width: 950px) {
+    .slideshow-container {
+        height: 250px;
+    }
     .mainImg {
         height: 200px;
     }
@@ -215,6 +222,9 @@ body.active {
   }
 
   @media (max-width: 580px) {
+    .slideshow-container {
+        height: 150px;
+    }
     .mainImg {
         height: 100px;
     }

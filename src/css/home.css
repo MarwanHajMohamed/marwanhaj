@@ -1,160 +1,121 @@
 .page-container {
     margin-left: 200px;
-    height: 35vw;
+    min-height: 35vw;
     background-color: var(--secondary);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .logo {
     font-family: 'Dancing Script', cursive;
     font-size: 7rem;
-    margin: 150px 60px;
-    position: absolute;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    margin: 0px 60px;
+    width: 250px;
+    padding-top: 13vw;
+
 }
 
 .title {
     margin: 0 55px;
-    padding-top: 24vw;
     display: flex;
     font-size: 3rem;
     color: black;
 }
 
 .description-wrapper {
-    margin-left: 30px;
-}
-
-.description {
-    display: inline-flex;
-}
-
-.dynamic-txts {
-    color: var(--gold);
-    margin: 0 25px;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    font-family: "Source c#Code Pro", monospace;
-    font-weight: 100;
-}
-
-.page-container .email {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+    margin: 20px;
+}
+
+.hc {
+    opacity: 0;
+    animation: slideDown 1000ms forwards;
+}
+
+ .hc:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.hc:nth-child(3){
+    animation-delay: 0.3s;
+}
+
+.page-container a:link {
+    text-decoration: none;
+}
+
+.emailMe {
+    z-index: 5000;
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    background-color: var(--primary);
+    color: white;
+    height: 100px;
+    width: 80px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 1px 5px 1px black;
+    transform: translatex(200px);
+    transition: 500ms ease-in-out;
+    padding: 20px;
+}
+
+.scrollEmail {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transform: translateY(100px);
+    transition: 300ms ease-in-out;
+    z-index: 1000;
+}
+
+.emailButton{
+    transform: translateY(0px);
+}
+
+.popUp {
+    transform: translateX(0px);
+}
+
+.emailMe .close {
     position: absolute;
-    transition:  250ms ease-in-out;
-    right: 100px;
-}
-
-.circle {
-    background-color: white;
-    color: var(--gold);
-    padding: 5px 7px;
-    border: 1px solid black;
-    border-radius: 50%;
-    transition:  250ms ease-in-out;
-    margin-right: 8px;
-}
-
-.circle:hover {
-    box-shadow: inset 2em 0 0 0 var(--gold);
-    /* background-color: var(--gold); */
-
+    right: 10px;
+    top: 5px;
     cursor: pointer;
 }
 
-.fa-envelope {
-  color: var(--gold);
+.scrollEmail a:link {
+    text-decoration: none;
 }
-
-.circle:hover .fa-envelope{
-  color: white;
-}
-
-.email-text:hover{
-    cursor: default;
-}
-
-  @media (max-width: 1230px) {
-    .page-container {
-    height: 45vw;
-    }
-
-    .page-container .email {
-        transform: translateY(30px);
-    }
-
-    .title {
-        padding-top: 30vw;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    .page-container {
-        height: 50vw;
-    }
-
-    .title {
-        padding-top: 25vw;
-    }
-
-    .logo {
-    margin: 40px 60px;
-
-    }
-
-    .page-container .email {
-        position: absolute;
-        top: 40vw;
-        left: 250px;
-    }
-  }
   
   @media (max-width: 820px) {
     .page-container {
         margin-left: 35px;
     }
-
-    .page-container .email {
-        left: 85px;
-    }
-    
-  }
-
-  @media (max-width: 700px) {
-    .title {
-        padding-top: 30vw;
-    }
-    
-  }
-
-  @media (max-width: 653px) {
-    .page-container {
-        height: 60vw;
-    }
-
-    .page-container .email {
-        top: 48vw;
-    }
   }
 
   @media (max-width: 600px) {
     .page-container {
-        height: 65vw;
+        display: flex;
+        flex-direction: column;
     }
 
+    .description-wrapper {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 20px 55px;
+    }
+    
     .logo {
         font-size: 4rem;
     }
 
     .title {
-        padding-top: 25vw;
-    }
-  }
-
-  @media (max-width: 470px) {
-    .title {
-        padding-top: 30vw;
         font-size: 2rem;
     }
   }

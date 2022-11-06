@@ -128,6 +128,16 @@ span {
 
 .references .email .circle {
     font-size: 1rem;
+    margin-right: 10px;
+}
+
+.references .email .circle i{
+    background-color: var(--primary);
+}
+
+.references .email .circle:hover i {
+    background-color: var(--gold);
+    color: white;
 }
 
 .references .email {
@@ -139,6 +149,30 @@ span {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.circle {
+    display: flex;
+    margin-right: 30px;
+} 
+
+.circle a:link {
+    text-decoration: none;    
+}
+
+.circle i{
+    font-size: 1.3rem;
+    border-radius: 50%;
+    background-color: var(--gold);
+    color: white;
+    display: flex;
+    padding: 7px;
+    transition: 200ms ease-in-out;
+}
+
+.circle:hover i{
+    background-color: white;
+    color: var(--gold);
 }
 
 @media (max-width: 1390px) {

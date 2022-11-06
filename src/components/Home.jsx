@@ -1,35 +1,77 @@
 import React from 'react'
+import { useState } from 'react'
 import Navbar from './Navbar'
 import '../css/home.css'
-import Mailto from './Mailto'
-import Laptop from '../css/images/laptop.png'
+import 'react-alice-carousel/lib/alice-carousel.css'
+import HomeCard from './commonStructures/HomeCard'
 // import typewriter from '../typewriter'
 
 export default function Home() {
+  const [emailButton, showEmailButton] = useState(false);
+  const [popUp, showPopUp] = useState(false);
+
+    const showEmailOnScroll = () =>{
+       if(window.scrollY >= 400){
+        showEmailButton(true);
+        showPopUp(true);
+       }
+       else{
+        showEmailButton(false);
+        showPopUp(false);
+       }
+    };
   
+    const closePopUp = () => {
+      const element = document.getElementById("emailMe");
+      element.classList.remove("popUp");
+      // showPopUp(false)
+    }
+    window.addEventListener('scroll', showEmailOnScroll);
     return (
       <>
         <Navbar />
         <div className="page-container" id='home'>
-          {/* <img src={Laptop} alt="laptop" className="laptop" /> */}
-          <div className="logo">MHM</div>
-            <div className="title">
-              Marwan Haj Mohamed
+          <div className="intro-wrapper">
+            <div className="logo">MHM</div>
+            <div className="title">Marwan Haj Mohamed</div>
+          </div>
+          
+          <div className="description-wrapper">
+            <div className="hc">
+              <a href={"mailto:marwan.khaj@hotmail.com"} >
+                <HomeCard
+                  icon="fa-solid fa-envelope"
+                />
+              </a>
             </div>
-            <div className="email">
-              <div className="circle">
-                <Mailto email='marwan.khaj@hotmail.com'>
-                  icon='fa-regular fa-envelope'
-                </Mailto>
-              </div>
-              <div className="email-text">
-                marwan.khaj@hotmail.com
-              </div>
+
+            <div className="hc" >
+              <a href="https://www.linkedin.com/in/marwan-haj-mohamed-305578218/">
+                <HomeCard
+                  icon="fa-brands fa-linkedin"
+                />
+              </a>
             </div>
-            <div className="description-wrapper">
-              <div className='dynamic-txts' id='text'></div>
-              {/* <script src={typewriter} /> */}
+            
+            <div className="hc">
+              <a href="https://github.com/MarwanHajMohamed">
+                <HomeCard
+                  icon="fa-brands fa-github"
+                />
+              </a>
             </div>
+          </div>
+        </div>
+        <div id='emailMe' className={popUp ? "emailMe popUp" : "emailMe"}>
+          <div className="close" onClick={closePopUp}><i className='fa-solid fa-x'></i></div>
+          <div className="popUpText">Don't hesitate to drop me an email!</div>
+        </div>
+        <div className={emailButton ? "scrollEmail emailButton" : "scrollEmail"} >
+          <a href={"mailto:marwan.khaj@hotmail.com"} >
+            <HomeCard
+              icon="fa-solid fa-envelope"
+            />
+          </a>
         </div>
       </>
     )

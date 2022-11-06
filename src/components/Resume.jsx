@@ -14,14 +14,6 @@ function Resume() {
             <div className="cv-title">
                 Marwan Haj Mohamed
             </div>
-            <div className="email">
-              <div className="circle">
-                <Mailto email='marwan.khaj@hotmail.com'></Mailto>
-              </div>
-              <div className="email-text">
-                marwan.khaj@hotmail.com
-              </div>
-            </div>
         </div>
         
         <div className="sections">
