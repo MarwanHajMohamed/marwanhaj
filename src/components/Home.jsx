@@ -4,28 +4,18 @@ import Navbar from './Navbar'
 import '../css/home.css'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import HomeCard from './commonStructures/HomeCard'
-// import typewriter from '../typewriter'
 
 export default function Home() {
   const [emailButton, showEmailButton] = useState(false);
-  const [popUp, showPopUp] = useState(false);
 
     const showEmailOnScroll = () =>{
        if(window.scrollY >= 400){
         showEmailButton(true);
-        showPopUp(true);
        }
        else{
         showEmailButton(false);
-        showPopUp(false);
        }
     };
-  
-    const closePopUp = () => {
-      const element = document.getElementById("emailMe");
-      element.classList.remove("popUp");
-      // showPopUp(false)
-    }
     window.addEventListener('scroll', showEmailOnScroll);
     return (
       <>
@@ -61,10 +51,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
-        <div id='emailMe' className={popUp ? "emailMe popUp" : "emailMe"}>
-          <div className="close" onClick={closePopUp}><i className='fa-solid fa-x'></i></div>
-          <div className="popUpText">Don't hesitate to drop me an email!</div>
         </div>
         <div className={emailButton ? "scrollEmail emailButton" : "scrollEmail"} >
           <a href={"mailto:marwan.khaj@hotmail.com"} >
