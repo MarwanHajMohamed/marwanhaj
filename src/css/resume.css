@@ -71,7 +71,7 @@
 .summary,
 .brunel-grades,
 .albemarle-grades,
-.btm li,
+.rwe li,
 .portfolio,
 .year-1-description,
 .hobbies-description,
@@ -97,7 +97,7 @@ span {
 .brunel-title,
 .albemarle-title,
 .douay-title,
-.btm-title,
+.rwe-title,
 .portfolio-title,
 .ata-title,
 .ncs-title,
@@ -108,7 +108,7 @@ span {
     color: black;
 }
 
-.btm,
+.rwe,
 .portfolio {
     margin: 0 0 30px 0;
 }
