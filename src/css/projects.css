@@ -14,7 +14,7 @@
 }
 
 .project-description {
-  margin: 10px 50px 30px;
+  margin: 10px 50px 10px;
   display: flex;
   font-size: 20px;
   color: gray;
@@ -55,11 +55,20 @@
   cursor: grab;
 }
 
+.link.one {
+  margin-top: 0;
+  border-top: 0;
+}
+
 .link {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 30px 70px 10px 55px;
+  font-weight: 700;
   color: black;
+  font-size: 24px;
+  border-top: 2px solid rgb(233, 233, 233, 0.4);
+  padding-top: 20px;
 }
 
 @media (max-width: 1200px) {

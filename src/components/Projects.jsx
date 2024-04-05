@@ -40,6 +40,7 @@ function Projects() {
           Here are some of the projects I worked on:
         </div>
 
+        <div className="link one">Healio</div>
         <Swiper
           navigation={true}
           modules={[Navigation, Pagination]}
@@ -68,8 +69,7 @@ function Projects() {
           </SwiperSlide>
         </Swiper>
 
-        <div className="link">Healio</div>
-
+        <div className="link">HecoCost</div>
         <Swiper
           navigation={true}
           modules={[Navigation, Pagination]}
@@ -95,8 +95,7 @@ function Projects() {
           </SwiperSlide>
         </Swiper>
 
-        <div className="link">HecoCost</div>
-
+        <div className="link">Brunel Talent Marketplace</div>
         <Swiper
           navigation={true}
           modules={[Navigation, Pagination]}
@@ -113,10 +112,7 @@ function Projects() {
           </SwiperSlide>
         </Swiper>
 
-        <a href="http://www.bruneltalentmarketplace.com/" className="link">
-          Brunel Talent Marketplace
-        </a>
-
+        <div className="link">Jana Healthcare</div>
         <Swiper
           navigation={true}
           modules={[Navigation, Pagination]}
@@ -135,10 +131,6 @@ function Projects() {
             <img src={JHC4} alt="" />
           </SwiperSlide>
         </Swiper>
-
-        <a href="http://www.janahealthcare.co.uk/" className="link">
-          Jana Healthcare
-        </a>
       </div>
     </>
   );
