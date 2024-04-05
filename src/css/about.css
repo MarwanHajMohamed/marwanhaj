@@ -14,10 +14,9 @@
 }
 
 .description {
-  margin: 0 50px 10px 55px;
+  margin: 10px 50px 30px;
   display: flex;
-  /* width: 70vw; */
-  font-size: 2rem;
+  font-size: 20px;
   color: gray;
 }
 
@@ -44,7 +43,7 @@
 
 @media (max-width: 480px) {
   .card {
-    height: 240px;   
+    height: 240px;
     margin: 30px 50px 10px;
   }
 
