@@ -36,8 +36,8 @@ export default function ProjectModal({
   const imageStyle = {
     position: "absolute",
     top: "0%",
-    left: "0%",
-    width: 100,
+    left: "50%",
+    transform: "translate(-50%, 0%)",
     height: 100,
     outline: 0,
   };

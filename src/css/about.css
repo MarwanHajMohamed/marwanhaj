@@ -40,22 +40,3 @@
     font-size: 1.5rem;
   }
 }
-
-@media (max-width: 480px) {
-  .card {
-    height: 240px;
-    margin: 30px 50px 10px;
-  }
-
-  .card i {
-    font-size: 1.5rem;
-  }
-
-  .card .card-title {
-    font-size: 1rem;
-  }
-
-  .card .card-text {
-    font-size: 0.9rem;
-  }
-}
