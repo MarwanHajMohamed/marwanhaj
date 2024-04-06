@@ -147,7 +147,11 @@ function Projects() {
         <ProjectModal
           title="JHC"
           images={JHCImages}
-          description="BJHCTM"
+          description="Jana Healthcare is a dermatology clinic which aims to provide the highest quality
+          clinical treatments including dermal fillers, hair treatment, acne treatment and wrinkle
+          treatment. This project was developed using ReactJs frontend and SpringBoot backend. Developing
+          JHC further enhanced my skills in developing a full stack application, combining filling forms
+          in the frontend and storing data in the database through SpringBoot and MySQL."
           open={openJHC}
           handleClose={handleCloseJHC}
         />
