@@ -114,7 +114,13 @@ function Projects() {
         <ProjectModal
           title="Healio"
           images={HealioImages}
-          description="Healio"
+          description="Healio is an AI healthcare chatbot that aims to deliver free consultancy
+          to patients with minor symptoms by providing diagnosis, medical treatment, and description
+          of the diagnosis that it provided. It uses a custom developed model which was trained on
+          extensive data containing diseases and their symptoms to be able to provide consultancy
+          to users based on their symptoms. Healio was trained using a Random Forest Classifier,
+          and uses NLP techniques to understand sentences provided by users and extract symptoms from
+          the input."
           open={openHealio}
           handleClose={handleCloseHealio}
         />
@@ -126,7 +132,10 @@ function Projects() {
         <ProjectModal
           title="BTM"
           images={BTMImages}
-          description="BTM"
+          description="BTM is a non-profit division at Brunel University dedicated to empowering SMEs
+          and Startups through their expertise in IT solutions. Their mission is to deliver IT services at
+          affordable prices guided by experts and fuelled by talented students. BTM was developed using
+          ReactJs to build the frontend, and was the first ReactJs project that I worked on."
           open={openBTM}
           handleClose={handleCloseBTM}
         />
