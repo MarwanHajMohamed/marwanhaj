@@ -1,0 +1,22 @@
+.project-modal-container .title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.mySwiper {
+  width: 500px;
+  height: 300px;
+}
+
+.mySwiper img {
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.zoom-in-image img {
+  width: 100vw;
+  height: 100vh;
+  cursor: zoom-out;
+}

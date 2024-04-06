@@ -1,12 +1,5 @@
 import "../css/projects.css";
 
-// eslint-disable-next-line no-unused-vars
-import SwiperCore, { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper";
-
 import BTMLogo from "../css/images/BTM Logo.png";
 import BTM1 from "../css/images/BTM1.png";
 import BTM2 from "../css/images/BTM2.png";
@@ -44,8 +37,68 @@ import AlMadani5 from "../css/images/AlMadani5.png";
 import AlMadani6 from "../css/images/AlMadani6.png";
 import AlMadani7 from "../css/images/AlMadani7.png";
 import AlMadani8 from "../css/images/AlMadani8.png";
+import ProjectModal from "./commonStructures/ProjectModal";
+import { useState } from "react";
 
 function Projects() {
+  const BTMImages = [BTM1, BTM2, BTM3];
+
+  const JHCImages = [JHC1, JHC2, JHC3, JHC4];
+
+  const HealioImages = [
+    Healio1,
+    Healio2,
+    Healio3,
+    Healio4,
+    Healio5,
+    Healio6,
+    Healio7,
+  ];
+
+  const HecoImages = [
+    HecoCost1,
+    HecoCost2,
+    HecoCost3,
+    HecoCost4,
+    HecoCost5,
+    HecoCost6,
+  ];
+
+  const AlMadaniImages = [
+    AlMadani1,
+    AlMadani2,
+    AlMadani3,
+    AlMadani4,
+    AlMadani5,
+    AlMadani6,
+    AlMadani7,
+    AlMadani8,
+  ];
+
+  const [openHealio, setOpenHealio] = useState(false);
+  const handleOpenHealio = () => setOpenHealio(true);
+  const handleCloseHealio = () => setOpenHealio(false);
+
+  const [openBTM, setOpenBTM] = useState(false);
+  const handleOpenBTM = () => setOpenBTM(true);
+  const handleCloseBTM = () => setOpenBTM(false);
+
+  const [openJHC, setOpenJHC] = useState(false);
+  const handleOpenJHC = () => setOpenJHC(true);
+  const handleCloseJHC = () => setOpenJHC(false);
+
+  const [openCalc, setOpenCalc] = useState(false);
+  const handleOpenCalc = () => setOpenCalc(true);
+  const handleCloseCalc = () => setOpenCalc(false);
+
+  const [openCost, setOpenCost] = useState(false);
+  const handleOpenCost = () => setOpenCost(true);
+  const handleCloseCost = () => setOpenCost(false);
+
+  const [openMadani, setOpenMadani] = useState(false);
+  const handleOpenMadani = () => setOpenMadani(true);
+  const handleCloseMadani = () => setOpenMadani(false);
+
   return (
     <div className="projects-page-container" id="projects">
       <div className="projects-title">Projects</div>
@@ -53,161 +106,79 @@ function Projects() {
         Here are some of the projects I worked on:
       </div>
       <div className="projects-container">
-        <div className="project">
-          <img src={HealioLogo} />
+        <div className="project" onClick={handleOpenHealio}>
+          <img src={HealioLogo} alt="" />
           <div className="title">Healio</div>
           <div className="overlay">View Project</div>
         </div>
-        <div className="project">
-          <img src={BTMLogo} />
+        <ProjectModal
+          title="Healio"
+          images={HealioImages}
+          description="Healio"
+          open={openHealio}
+          handleClose={handleCloseHealio}
+        />
+        <div className="project" onClick={handleOpenBTM}>
+          <img src={BTMLogo} alt="" />
           <div className="title">BTM</div>
           <div className="overlay">View Project</div>
         </div>
-        <div className="project">
-          <img src={JHCLogo} />
+        <ProjectModal
+          title="BTM"
+          images={BTMImages}
+          description="BTM"
+          open={openBTM}
+          handleClose={handleCloseBTM}
+        />
+        <div className="project" onClick={handleOpenJHC}>
+          <img src={JHCLogo} alt="" />
           <div className="title">Jana Healthcare</div>
           <div className="overlay">View Project</div>
         </div>
-        <div className="project">
-          <img src={HecoLogo} />
+        <ProjectModal
+          title="JHC"
+          images={JHCImages}
+          description="BJHCTM"
+          open={openJHC}
+          handleClose={handleCloseJHC}
+        />
+        <div className="project" onClick={handleOpenCalc}>
+          <img src={HecoLogo} alt="" />
           <div className="title">HecoCalc</div>
           <div className="overlay">View Project</div>
         </div>
-        <div className="project">
-          <img src={HecoLogo} />
+        <ProjectModal
+          title="HecoCalc"
+          images={HecoImages}
+          description="HecoCalc"
+          open={openCalc}
+          handleClose={handleCloseCalc}
+        />
+        <div className="project" onClick={handleOpenCost}>
+          <img src={HecoLogo} alt="" />
           <div className="title">HecoCost</div>
           <div className="overlay">View Project</div>
         </div>
-        <div className="project">
-          <img src={AlMadaniLogo} />
+        <ProjectModal
+          title="HecoCost"
+          images={HecoImages}
+          description="HecoCost"
+          open={openCost}
+          handleClose={handleCloseCost}
+        />
+        <div className="project" onClick={handleOpenMadani}>
+          <img src={AlMadaniLogo} alt="" />
           <div className="title">Al Madani</div>
           <div className="overlay">View Project</div>
         </div>
+        <ProjectModal
+          title="Al Madani"
+          images={AlMadaniImages}
+          description="AlMadani"
+          open={openMadani}
+          handleClose={handleCloseMadani}
+        />
       </div>
-      {/* <div className="link one">Healio</div>
-        <Swiper
-          navigation={true}
-          modules={[Navigation, Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img src={Healio1} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Healio2} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Healio3} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Healio4} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Healio5} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Healio6} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Healio7} alt="" />
-          </SwiperSlide>
-        </Swiper>
-
-        <div className="link">HecoCost</div>
-        <Swiper
-          navigation={true}
-          modules={[Navigation, Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img src={HecoCost1} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={HecoCost2} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={HecoCost3} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={HecoCost4} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={HecoCost5} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={HecoCost6} alt="" />
-          </SwiperSlide>
-        </Swiper>
-
-        <div className="link">Brunel Talent Marketplace</div>
-        <Swiper
-          navigation={true}
-          modules={[Navigation, Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img src={BTM1} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={BTM2} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={BTM3} alt="" />
-          </SwiperSlide>
-        </Swiper>
-
-        <div className="link">Jana Healthcare</div>
-        <Swiper
-          navigation={true}
-          modules={[Navigation, Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img src={JHC1} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={JHC2} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={JHC3} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={JHC4} alt="" />
-          </SwiperSlide>
-        </Swiper>
-
-        <div className="link">Al Madani</div>
-        <Swiper
-          navigation={true}
-          modules={[Navigation, Pagination]}
-          className="mySwiper app"
-          slidesPerGroup={2}
-        >
-          <SwiperSlide>
-            <img src={AlMadani1} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={AlMadani2} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={AlMadani3} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={AlMadani4} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={AlMadani5} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={AlMadani6} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={AlMadani7} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={AlMadani8} alt="" />
-          </SwiperSlide>
-        </Swiper> */}
     </div>
   );
 }
