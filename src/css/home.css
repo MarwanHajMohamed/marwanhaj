@@ -1,93 +1,92 @@
 .page-container {
-    margin-left: 200px;
-    min-height: 35vw;
-    background-color: var(--secondary);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  margin-left: 200px;
+  min-height: 35vw;
+  background-color: var(--secondary);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .logo {
-    font-family: 'Dancing Script', cursive;
-    font-size: 7rem;
-    margin: 0px 60px;
-    width: 250px;
-    padding-top: 13vw;
-
+  font-family: "Dancing Script", cursive;
+  font-size: 7rem;
+  margin: 0px 60px;
+  width: 250px;
+  padding-top: 13vw;
 }
 
-.title {
-    margin: 0 55px;
-    display: flex;
-    font-size: 3rem;
-    color: black;
+.page-container .title {
+  margin: 0 55px;
+  display: flex;
+  font-size: 3rem;
+  color: black;
 }
 
 .description-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 50px;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 50px;
+  margin: 20px;
 }
 
 .hc {
-    opacity: 0;
-    animation: slideDown 1000ms forwards;
+  opacity: 0;
+  animation: slideDown 1000ms forwards;
 }
 
- .hc:nth-child(2){
-    animation-delay: 0.2s;
+.hc:nth-child(2) {
+  animation-delay: 0.2s;
 }
 
-.hc:nth-child(3){
-    animation-delay: 0.3s;
+.hc:nth-child(3) {
+  animation-delay: 0.3s;
 }
 
 .page-container a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .scrollEmail {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    transform: translateY(100px);
-    transition: 300ms ease-in-out;
-    z-index: 1000;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transform: translateY(100px);
+  transition: 300ms ease-in-out;
+  z-index: 1000;
 }
 
-.emailButton{
-    transform: translateY(0px);
+.emailButton {
+  transform: translateY(0px);
 }
 
 .scrollEmail a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
-  
-  @media (max-width: 820px) {
-    .page-container {
-        margin-left: 35px;
-    }
+
+@media (max-width: 820px) {
+  .page-container {
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    display: flex;
+    flex-direction: column;
   }
 
-  @media (max-width: 600px) {
-    .page-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .description-wrapper {
-        flex-direction: row;
-        justify-content: flex-start;
-        margin: 20px 55px;
-    }
-    
-    .logo {
-        font-size: 4rem;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
+  .description-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 20px 55px;
   }
+
+  .logo {
+    font-size: 4rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
