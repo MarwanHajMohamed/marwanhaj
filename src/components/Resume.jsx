@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/resume.css";
-import Mailto from "./Mailto";
 
 import CV from "../docs/CV Online.pdf";
 

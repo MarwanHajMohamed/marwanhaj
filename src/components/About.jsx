@@ -16,7 +16,7 @@ export default function About() {
           <Card
             icon="fa-brands fa-python"
             title="Python"
-            text="Proficient in Python development with extensive experience in designing, developing and testing 
+            text="Proficient in Python development with extensive experience in designing, developing and testing
             different NLP algorithms."
           />
           <Card
