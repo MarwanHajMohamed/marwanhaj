@@ -30,6 +30,26 @@
   margin: 20px;
 }
 
+.intro-wrapper .button-container {
+  margin-top: 20px;
+  margin-left: 55px;
+}
+
+.intro-wrapper button {
+  border: 0;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: 100ms ease-in-out;
+}
+
+.intro-wrapper button:hover {
+  background-color: var(--gold);
+}
+
 .hc {
   opacity: 0;
   animation: slideDown 1000ms forwards;
