@@ -1,16 +1,26 @@
 import React from "react";
 import "../css/about.css";
 import Card from "./commonStructures/Card";
+import me from "../css/images/MarwanHajMohamed2.png";
 
 export default function About() {
   return (
     <div>
       <div className="about-container" id="about">
-        <div className="about-title">About Me</div>
-        <div className="description">
-          I am a passionate, quick learning programmer that constantly broadens
-          my knowledge in different languages to earn more experience in this
-          field. I have knowledge in the following so far:
+        <div className="about-title">Who am I?</div>
+        <div className="about-me-container">
+          <img src={me} alt="" />
+          <div className="description-container">
+            <div className="description name">
+              My name is Marwan Haj Mohamed
+            </div>
+            <div className="description">
+              I am a passionate, quick learning programmer that constantly
+              broadens my knowledge in different languages to earn more
+              experience in this field. I have knowledge in the following so
+              far:
+            </div>
+          </div>
         </div>
         <div className="card-container">
           <Card

@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import Navbar from "./Navbar";
 import "../css/home.css";
 import "react-alice-carousel/lib/alice-carousel.css";
 import HomeCard from "./commonStructures/HomeCard";
 import CV from "../docs/CV Online.pdf";
+import bg from "../css/images/bg.png";
 
 export default function Home() {
   const [emailButton, showEmailButton] = useState(false);
@@ -30,17 +30,16 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      <img src={bg} alt="" className="background" />
       <div className="page-container" id="home">
         <div className="intro-wrapper">
-          <div className="logo">MHM</div>
-          <div className="title">Marwan Haj Mohamed</div>
+          <div className="title">Hi, I'm Marwan</div>
           <div className="button-container">
             <button onClick={downloadResume}>Download Resume</button>
           </div>
         </div>
 
-        <div className="description-wrapper">
+        {/* <div className="description-wrapper">
           <div className="hc">
             <a href={"mailto:marwan.khaj@hotmail.com"}>
               <HomeCard icon="fa-solid fa-envelope" />
@@ -58,7 +57,7 @@ export default function Home() {
               <HomeCard icon="fa-brands fa-github" />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className={emailButton ? "scrollEmail emailButton" : "scrollEmail"}>
         <a href={"mailto:marwan.khaj@hotmail.com"}>

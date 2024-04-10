@@ -1,17 +1,17 @@
 import "../css/projects.css";
 
-import BTMLogo from "../css/images/BTM Logo.png";
+import BTMAddress from "../css/images/BTMAddress.png";
 import BTM1 from "../css/images/BTM1.png";
 import BTM2 from "../css/images/BTM2.png";
 import BTM3 from "../css/images/BTM3.png";
 
-import JHCLogo from "../css/images/JHC Logo.png";
+import JHCAddress from "../css/images/JHCAddress.png";
 import JHC1 from "../css/images/JHC1.png";
 import JHC2 from "../css/images/JHC2.png";
 import JHC3 from "../css/images/JHC3.png";
 import JHC4 from "../css/images/JHC4.png";
 
-import HealioLogo from "../css/images/Healio Logo.png";
+import HealioAddress from "../css/images/HealioAddress.png";
 import Healio1 from "../css/images/Healio1.png";
 import Healio2 from "../css/images/Healio2.png";
 import Healio3 from "../css/images/Healio3.png";
@@ -20,7 +20,7 @@ import Healio5 from "../css/images/Healio5.png";
 import Healio6 from "../css/images/Healio6.png";
 import Healio7 from "../css/images/Healio7.png";
 
-import HecoLogo from "../css/images/Heco Logo.png";
+import HecoCostAddress from "../css/images/HecoCostAddress.png";
 import HecoCost1 from "../css/images/HecoCost1.png";
 import HecoCost2 from "../css/images/HecoCost2.png";
 import HecoCost3 from "../css/images/HecoCost3.png";
@@ -28,7 +28,9 @@ import HecoCost4 from "../css/images/HecoCost4.png";
 import HecoCost5 from "../css/images/HecoCost5.png";
 import HecoCost6 from "../css/images/HecoCost6.png";
 
-import AlMadaniLogo from "../css/images/Al Madani Logo.png";
+import HecoCalcAddress from "../css/images/HecoCalcAddress.png";
+
+import AlMadaniAddress from "../css/images/AlMadaniAddress.png";
 import AlMadani1 from "../css/images/AlMadani1.png";
 import AlMadani2 from "../css/images/AlMadani2.png";
 import AlMadani3 from "../css/images/AlMadani3.png";
@@ -37,8 +39,13 @@ import AlMadani5 from "../css/images/AlMadani5.png";
 import AlMadani6 from "../css/images/AlMadani6.png";
 import AlMadani7 from "../css/images/AlMadani7.png";
 import AlMadani8 from "../css/images/AlMadani8.png";
-import ProjectModal from "./commonStructures/ProjectModal";
-import { useState } from "react";
+
+// eslint-disable-next-line no-unused-vars
+import SwiperCore, { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper";
 
 function Projects() {
   const BTMImages = [BTM1, BTM2, BTM3];
@@ -75,43 +82,50 @@ function Projects() {
     AlMadani8,
   ];
 
-  const [openHealio, setOpenHealio] = useState(false);
-  const handleOpenHealio = () => setOpenHealio(true);
-  const handleCloseHealio = () => setOpenHealio(false);
-
-  const [openBTM, setOpenBTM] = useState(false);
-  const handleOpenBTM = () => setOpenBTM(true);
-  const handleCloseBTM = () => setOpenBTM(false);
-
-  const [openJHC, setOpenJHC] = useState(false);
-  const handleOpenJHC = () => setOpenJHC(true);
-  const handleCloseJHC = () => setOpenJHC(false);
-
-  const [openCalc, setOpenCalc] = useState(false);
-  const handleOpenCalc = () => setOpenCalc(true);
-  const handleCloseCalc = () => setOpenCalc(false);
-
-  const [openCost, setOpenCost] = useState(false);
-  const handleOpenCost = () => setOpenCost(true);
-  const handleCloseCost = () => setOpenCost(false);
-
-  const [openMadani, setOpenMadani] = useState(false);
-  const handleOpenMadani = () => setOpenMadani(true);
-  const handleCloseMadani = () => setOpenMadani(false);
-
   return (
     <div className="projects-page-container" id="projects">
       <div className="projects-title">Projects</div>
-      <div className="project-description">
-        Here are some of the projects I worked on:
-      </div>
       <div className="projects-container">
-        <div className="project" onClick={handleOpenHealio}>
-          <img src={HealioLogo} alt="" />
-          <div className="title">Healio</div>
-          <div className="overlay">View Project</div>
-        </div>
-        <ProjectModal
+        <div className="project-container">
+          <div className="project one">
+            <div className="project-title">
+              <div className="title">Healio</div>
+              <div className="title-description">
+                Your personal AI helthcare assistant
+              </div>
+            </div>
+            <div className="project-image">
+              <img src={HealioAddress} alt="" />
+            </div>
+
+            {/* <div className="project-description">
+            <Swiper
+              navigation={true}
+              modules={[Navigation, Pagination]}
+              className="mySwiper"
+            >
+              {HealioImages.map((image) => {
+                return (
+                  <SwiperSlide>
+                    <img src={image} alt="" />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div> */}
+            {/* <div className="description">
+              Healio is an AI healthcare chatbot that aims to deliver free
+              consultancy to patients with minor symptoms by providing
+              diagnosis, medical treatment, and description of the diagnosis
+              that it provided. It uses a custom developed model which was
+              trained on extensive data containing diseases and their symptoms
+              to be able to provide consultancy to users based on their
+              symptoms. Healio was trained using a Random Forest Classifier, and
+              uses NLP techniques to understand sentences provided by users and
+              extract symptoms from the input.
+            </div> */}
+          </div>
+          {/* <ProjectModal
           title="Healio"
           images={HealioImages}
           description="Healio is an AI healthcare chatbot that aims to deliver free consultancy
@@ -123,13 +137,35 @@ function Projects() {
           the input."
           open={openHealio}
           handleClose={handleCloseHealio}
-        />
-        <div className="project" onClick={handleOpenBTM}>
-          <img src={BTMLogo} alt="" />
-          <div className="title">BTM</div>
-          <div className="overlay">View Project</div>
-        </div>
-        <ProjectModal
+        /> */}
+          <div className="project two">
+            <div className="project-title">
+              <div className="title">Al Madani</div>
+              <div className="title-description">
+                Customer service for tenants
+              </div>
+            </div>
+            <div className="project-image">
+              <img src={AlMadaniAddress} alt="" />
+            </div>
+            {/* <div className="project-description">
+            <Swiper
+              navigation={true}
+              modules={[Navigation, Pagination]}
+              className="mySwiper phone"
+            >
+              {AlMadaniImages.map((image) => {
+                return (
+                  <SwiperSlide>
+                    <img src={image} alt="" />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div> */}
+          </div>
+
+          {/* <ProjectModal
           title="BTM"
           images={BTMImages}
           description="BTM is a non-profit division at Brunel University dedicated to empowering SMEs
@@ -138,13 +174,63 @@ function Projects() {
           ReactJs to build the frontend, and was the first ReactJs project that I worked on."
           open={openBTM}
           handleClose={handleCloseBTM}
-        />
-        <div className="project" onClick={handleOpenJHC}>
-          <img src={JHCLogo} alt="" />
-          <div className="title">Jana Healthcare</div>
-          <div className="overlay">View Project</div>
+        /> */}
         </div>
-        <ProjectModal
+        <div className="project-container two">
+          <div className="project three">
+            <div className="project-title">
+              <div className="title">BTM</div>
+              <div className="title-description">
+                Non-profit consultancy for Brunel University
+              </div>
+            </div>
+            <div className="project-image">
+              <img src={BTMAddress} alt="" />
+            </div>
+            {/* <div className="project-description">
+              <Swiper
+                navigation={true}
+                modules={[Navigation, Pagination]}
+                className="mySwiper"
+              >
+                {BTMImages.map((image) => {
+                  return (
+                    <SwiperSlide>
+                      <img src={image} alt="" />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div> */}
+          </div>
+          <div className="project four">
+            <div className="project-title">
+              <div className="title">JHC</div>
+              <div className="title-description">
+                A dermatology clinic portfolio
+              </div>
+            </div>
+            <div className="project-image">
+              <img src={JHCAddress} alt="" />
+            </div>
+            {/* <div className="project-description">
+              <Swiper
+                navigation={true}
+                modules={[Navigation, Pagination]}
+                className="mySwiper"
+              >
+                {JHCImages.map((image) => {
+                  return (
+                    <SwiperSlide>
+                      <img src={image} alt="" />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div> */}
+          </div>
+        </div>
+        {/* <ProjectModal
           title="JHC"
           images={JHCImages}
           description="Jana Healthcare is a dermatology clinic which aims to provide the highest quality
@@ -154,43 +240,83 @@ function Projects() {
           in the frontend and storing data in the database through SpringBoot and MySQL."
           open={openJHC}
           handleClose={handleCloseJHC}
-        />
-        <div className="project" onClick={handleOpenCalc}>
-          <img src={HecoLogo} alt="" />
-          <div className="title">HecoCalc</div>
-          <div className="overlay">View Project</div>
-        </div>
-        <ProjectModal
+        /> */}
+        <div className="project-container three">
+          <div className="project five">
+            <div className="project-title">
+              <div className="title">HecoCalc</div>
+              <div className="title-description">
+                A web-based health economics calculator
+              </div>
+            </div>
+            <div className="project-image">
+              <img src={HecoCalcAddress} alt="" />
+            </div>
+            {/* <div className="project-description">
+              <Swiper
+                navigation={true}
+                modules={[Navigation, Pagination]}
+                className="mySwiper"
+              >
+                {HecoImages.map((image) => {
+                  return (
+                    <SwiperSlide>
+                      <img src={image} alt="" />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div> */}
+          </div>
+          {/* <ProjectModal
           title="HecoCalc"
           images={HecoImages}
           description="HecoCalc"
           open={openCalc}
           handleClose={handleCloseCalc}
-        />
-        <div className="project" onClick={handleOpenCost}>
-          <img src={HecoLogo} alt="" />
-          <div className="title">HecoCost</div>
-          <div className="overlay">View Project</div>
+        /> */}
+          <div className="project six">
+            <div className="project-title">
+              <div className="title">HecoCost</div>
+              <div className="title-description">
+                A budget impact modelling platform
+              </div>
+            </div>
+            <div className="project-image">
+              <img src={HecoCostAddress} alt="" />
+            </div>
+            {/* <div className="project-description">
+              <Swiper
+                navigation={true}
+                modules={[Navigation, Pagination]}
+                className="mySwiper"
+              >
+                {HecoImages.map((image) => {
+                  return (
+                    <SwiperSlide>
+                      <img src={image} alt="" />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div> */}
+          </div>
         </div>
-        <ProjectModal
+        {/* <ProjectModal
           title="HecoCost"
           images={HecoImages}
           description="HecoCost"
           open={openCost}
           handleClose={handleCloseCost}
-        />
-        <div className="project" onClick={handleOpenMadani}>
-          <img src={AlMadaniLogo} alt="" />
-          <div className="title">Al Madani</div>
-          <div className="overlay">View Project</div>
-        </div>
-        <ProjectModal
+        /> */}
+
+        {/* <ProjectModal
           title="Al Madani"
           images={AlMadaniImages}
           description="AlMadani"
           open={openMadani}
           handleClose={handleCloseMadani}
-        />
+        /> */}
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ import { Link } from "react-scroll";
 import { useState } from "react";
 
 import "../css/navbar.css";
-import Marwan from "../css/images/MarwanHajMohamed.png";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -27,9 +26,6 @@ export default function Navbar() {
             <i className={"fa-solid " + (toggle ? "fa-x" : "fa-bars")}></i>
           </button>
           <div className="navbar">
-            <div className="profile-photo">
-              <img src={Marwan} alt="img" />
-            </div>
             <div className="first-name">Marwan</div>
             <div className="surname">Haj Mohamed</div>
 

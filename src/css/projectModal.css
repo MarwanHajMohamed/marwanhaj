@@ -12,10 +12,4 @@
 
 .mySwiper img {
   width: 100%;
-  cursor: zoom-in;
-}
-
-.zoom-in-image img {
-  width: 100vw;
-  cursor: zoom-out;
 }
