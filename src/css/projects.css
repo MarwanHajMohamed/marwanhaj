@@ -46,7 +46,31 @@
 
 .projects-container .project:hover {
   box-shadow: 0 10px 50px rgb(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  transform: translateY(2px);
+}
+
+.projects-container .project:hover .project-image img {
+  bottom: -30px;
+}
+
+.projects-container .project.two:hover .project-image img {
+  bottom: -340px;
+}
+
+.projects-container .project.three:hover .project-image img {
+  bottom: -90px;
+}
+
+.projects-container .project.four:hover .project-image img {
+  bottom: -120px;
+}
+
+.projects-container .project.five:hover .project-image img {
+  bottom: -80px;
+}
+
+.projects-container .project.six:hover .project-image img {
+  bottom: -90px;
 }
 
 .projects-container .project.one {
@@ -100,6 +124,7 @@
   right: -20px;
   bottom: -40px;
   border-radius: 15px;
+  transition: 200ms ease-in-out;
 }
 
 .projects-container .project.three .project-image img {
@@ -174,9 +199,6 @@
   color: var(--primary);
   font-weight: 700;
   letter-spacing: -2px;
-}
-
-.projects-container .project.one .title {
 }
 
 .mySwiper {
