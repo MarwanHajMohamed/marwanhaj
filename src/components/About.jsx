@@ -38,7 +38,7 @@ export default function About() {
           <Card
             icon="fa-brands fa-react"
             title="ReactJS"
-            text="Skilled ReactJS developer capable in building dynamic and responsive user interfaces, gaining
+            text="Adept ReactJS developer capable of building dynamic and responsive user interfaces, gaining
             knowledge through building various websites."
           />
           <Card
@@ -46,6 +46,12 @@ export default function About() {
             title="React Native"
             text="Skilled React Native developer utilising my knowledge in React to build cross platform mobile
             applications such as Al Madani (Shown in Projects)."
+          />
+          <Card
+            icon="fa-brands fa-aws"
+            title="AWS"
+            text="Utilized Amazon Cognito for user authentication and data storage, and leveraged S3 buckets 
+            for secure company data storage."
           />
           <Card
             icon="fa-solid fa-power-off"

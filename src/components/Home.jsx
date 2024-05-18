@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../css/home.css";
 import "react-alice-carousel/lib/alice-carousel.css";
 import HomeCard from "./commonStructures/HomeCard";
-import CV from "../docs/CV Online.pdf";
+import CV from "../docs/CV.pdf";
 import bg from "../css/images/bg.png";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
     const pdfUrl = CV;
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "Resume.pdf"; // specify the filename
+    link.download = "CV.pdf"; // specify the filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
