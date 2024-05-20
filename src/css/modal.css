@@ -1,0 +1,41 @@
+.modal-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: var(--bg);
+  top: 0;
+  z-index: 20;
+  transition: 200ms ease-in-out;
+  padding: 30px;
+}
+
+.modal-container.open {
+  transform: translateY(0vh);
+}
+
+.modal-container.closed {
+  transform: translateY(100vh);
+}
+
+.modal-container .modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-container .modal .close-container {
+  margin-bottom: 20px;
+}
+
+.modal-container .modal .close i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-container .modal .title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
