@@ -152,29 +152,11 @@
 }
 
 .swiper-button-prev {
-  background-color: var(--bg) !important;
-  padding: 5px 15px 5px 10px;
-  margin-left: -10px;
-  color: white;
-  transition: 100ms ease-in-out;
-  border-radius: 0 10px 10px 0;
-}
-
-.swiper-button-prev:hover {
-  border-radius: 0 25px 25px 0;
+  color: black !important;
 }
 
 .swiper-button-next {
-  background-color: var(--bg) !important;
-  padding: 5px 10px 5px 15px;
-  margin-right: -10px;
-  color: white;
-  transition: 100ms ease-in-out;
-  border-radius: 10px 0 0 10px;
-}
-
-.swiper-button-next:hover {
-  border-radius: 25px 0 0 25px;
+  color: black !important;
 }
 
 .projects-container .project .project-description {
@@ -199,24 +181,6 @@
   color: var(--primary);
   font-weight: 700;
   letter-spacing: -2px;
-}
-
-.mySwiper {
-  width: 50vw;
-  max-width: 1000px;
-}
-
-.mySwiper img {
-  width: 100%;
-  cursor: grab;
-}
-
-.mySwiper img:active {
-  cursor: grabbing;
-}
-
-.mySwiper.phone {
-  width: 20vw;
 }
 
 @media (max-width: 1140px) {

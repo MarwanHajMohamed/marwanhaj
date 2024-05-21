@@ -87,15 +87,15 @@ function Projects() {
 
   const [title, setTitle] = useState("Test");
   const [images, setImages] = useState([]);
-  const [description, setDescription] = useState("");
 
   const [open, setOpen] = useState(false);
+  const [type, setType] = useState("");
 
-  const setModalDetails = (title, images, description) => {
+  const setModalDetails = (title, images, type) => {
     setOpen(true);
     setTitle(title);
     setImages(images);
-    setDescription(description);
+    setType(type);
   };
 
   return (
@@ -103,7 +103,7 @@ function Projects() {
       <Modal
         title={title}
         images={images}
-        description={description}
+        type={type}
         open={open}
         setOpen={setOpen}
       />
@@ -113,7 +113,7 @@ function Projects() {
           <div className="project-container">
             <div
               className="project one"
-              onClick={() => setModalDetails("Healio", HealioImages)}
+              onClick={() => setModalDetails("Healio", HealioImages, "website")}
             >
               <div className="project-title">
                 <div className="title">Healio</div>
@@ -124,50 +124,10 @@ function Projects() {
               <div className="project-image">
                 <img src={HealioAddress} alt="" />
               </div>
-
-              {/* <div className="project-description">
-            <Swiper
-              navigation={true}
-              modules={[Navigation, Pagination]}
-              className="mySwiper"
-            >
-              {HealioImages.map((image) => {
-                return (
-                  <SwiperSlide>
-                    <img src={image} alt="" />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div> */}
-              {/* <div className="description">
-              Healio is an AI healthcare chatbot that aims to deliver free
-              consultancy to patients with minor symptoms by providing
-              diagnosis, medical treatment, and description of the diagnosis
-              that it provided. It uses a custom developed model which was
-              trained on extensive data containing diseases and their symptoms
-              to be able to provide consultancy to users based on their
-              symptoms. Healio was trained using a Random Forest Classifier, and
-              uses NLP techniques to understand sentences provided by users and
-              extract symptoms from the input.
-            </div> */}
             </div>
-            {/* <ProjectModal
-          title="Healio"
-          images={HealioImages}
-          description="Healio is an AI healthcare chatbot that aims to deliver free consultancy
-          to patients with minor symptoms by providing diagnosis, medical treatment, and description
-          of the diagnosis that it provided. It uses a custom developed model which was trained on
-          extensive data containing diseases and their symptoms to be able to provide consultancy
-          to users based on their symptoms. Healio was trained using a Random Forest Classifier,
-          and uses NLP techniques to understand sentences provided by users and extract symptoms from
-          the input."
-          open={openHealio}
-          handleClose={handleCloseHealio}
-        /> */}
             <div
               className="project two"
-              onClick={() => setModalDetails("AlMadani", AlMadaniImages)}
+              onClick={() => setModalDetails("AlMadani", AlMadaniImages, "app")}
             >
               <div className="project-title">
                 <div className="title">Al Madani</div>
@@ -178,36 +138,13 @@ function Projects() {
               <div className="project-image">
                 <img src={AlMadaniAddress} alt="" />
               </div>
-              {/* <div className="project-description">
-            <Swiper
-              navigation={true}
-              modules={[Navigation, Pagination]}
-              className="mySwiper phone"
-            >
-              {AlMadaniImages.map((image) => {
-                return (
-                  <SwiperSlide>
-                    <img src={image} alt="" />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div> */}
             </div>
-
-            {/* <ProjectModal
-          title="BTM"
-          images={BTMImages}
-          description="BTM is a non-profit division at Brunel University dedicated to empowering SMEs
-          and Startups through their expertise in IT solutions. Their mission is to deliver IT services at
-          affordable prices guided by experts and fuelled by talented students. BTM was developed using
-          ReactJs to build the frontend, and was the first ReactJs project that I worked on."
-          open={openBTM}
-          handleClose={handleCloseBTM}
-        /> */}
           </div>
           <div className="project-container two">
-            <div className="project three">
+            <div
+              className="project three"
+              onClick={() => setModalDetails("BTM", BTMImages, "website")}
+            >
               <div className="project-title">
                 <div className="title">BTM</div>
                 <div className="title-description">
@@ -217,23 +154,11 @@ function Projects() {
               <div className="project-image">
                 <img src={BTMAddress} alt="" />
               </div>
-              {/* <div className="project-description">
-              <Swiper
-                navigation={true}
-                modules={[Navigation, Pagination]}
-                className="mySwiper"
-              >
-                {BTMImages.map((image) => {
-                  return (
-                    <SwiperSlide>
-                      <img src={image} alt="" />
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
-            </div> */}
             </div>
-            <div className="project four">
+            <div
+              className="project four"
+              onClick={() => setModalDetails("JHC", JHCImages, "website")}
+            >
               <div className="project-title">
                 <div className="title">JHC</div>
                 <div className="title-description">
@@ -243,36 +168,13 @@ function Projects() {
               <div className="project-image">
                 <img src={JHCAddress} alt="" />
               </div>
-              {/* <div className="project-description">
-              <Swiper
-                navigation={true}
-                modules={[Navigation, Pagination]}
-                className="mySwiper"
-              >
-                {JHCImages.map((image) => {
-                  return (
-                    <SwiperSlide>
-                      <img src={image} alt="" />
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
-            </div> */}
             </div>
           </div>
-          {/* <ProjectModal
-          title="JHC"
-          images={JHCImages}
-          description="Jana Healthcare is a dermatology clinic which aims to provide the highest quality
-          clinical treatments including dermal fillers, hair treatment, acne treatment and wrinkle
-          treatment. This project was developed using ReactJs frontend and SpringBoot backend. Developing
-          JHC further enhanced my skills in developing a full stack application, combining filling forms
-          in the frontend and storing data in the database through SpringBoot and MySQL."
-          open={openJHC}
-          handleClose={handleCloseJHC}
-        /> */}
           <div className="project-container three">
-            <div className="project five">
+            <div
+              className="project five"
+              onClick={() => setModalDetails("HecoCalc", HecoImages, "website")}
+            >
               <div className="project-title">
                 <div className="title">HecoCalc</div>
                 <div className="title-description">
@@ -282,30 +184,11 @@ function Projects() {
               <div className="project-image">
                 <img src={HecoCalcAddress} alt="" />
               </div>
-              {/* <div className="project-description">
-              <Swiper
-                navigation={true}
-                modules={[Navigation, Pagination]}
-                className="mySwiper"
-              >
-                {HecoImages.map((image) => {
-                  return (
-                    <SwiperSlide>
-                      <img src={image} alt="" />
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
-            </div> */}
             </div>
-            {/* <ProjectModal
-          title="HecoCalc"
-          images={HecoImages}
-          description="HecoCalc"
-          open={openCalc}
-          handleClose={handleCloseCalc}
-        /> */}
-            <div className="project six">
+            <div
+              className="project six"
+              onClick={() => setModalDetails("HecoCost", HecoImages, "website")}
+            >
               <div className="project-title">
                 <div className="title">HecoCost</div>
                 <div className="title-description">
@@ -315,38 +198,8 @@ function Projects() {
               <div className="project-image">
                 <img src={HecoCostAddress} alt="" />
               </div>
-              {/* <div className="project-description">
-              <Swiper
-                navigation={true}
-                modules={[Navigation, Pagination]}
-                className="mySwiper"
-              >
-                {HecoImages.map((image) => {
-                  return (
-                    <SwiperSlide>
-                      <img src={image} alt="" />
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
-            </div> */}
             </div>
           </div>
-          {/* <ProjectModal
-          title="HecoCost"
-          images={HecoImages}
-          description="HecoCost"
-          open={openCost}
-          handleClose={handleCloseCost}
-        /> */}
-
-          {/* <ProjectModal
-          title="Al Madani"
-          images={AlMadaniImages}
-          description="AlMadani"
-          open={openMadani}
-          handleClose={handleCloseMadani}
-        /> */}
         </div>
       </div>
     </>

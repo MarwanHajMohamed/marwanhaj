@@ -2,11 +2,15 @@
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background-color: var(--bg);
   top: 0;
   z-index: 20;
   transition: 200ms ease-in-out;
-  padding: 30px;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.7px);
+  -webkit-backdrop-filter: blur(12.7px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .modal-container.open {
@@ -20,13 +24,21 @@
 .modal-container .modal {
   display: flex;
   flex-direction: column;
+  background-color: var(--bg);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 40px 0;
+  height: 90vh;
+  overflow: auto;
 }
 
-.modal-container .modal .close-container {
-  margin-bottom: 20px;
+.modal-container .close-container {
+  padding: 30px 50px;
+  position: absolute;
 }
 
-.modal-container .modal .close i {
+.modal-container .close i {
   font-size: 24px;
   cursor: pointer;
 }
@@ -38,4 +50,28 @@
   font-size: 3rem;
   font-weight: 700;
   color: var(--primary);
+}
+
+.modal-container .modal .description-container .images-container {
+  margin-top: 20px;
+}
+
+.mySwiper {
+  width: 70vw;
+  max-width: 1000px;
+  border-radius: 15px;
+}
+
+.modal-container .modal.app .mySwiper {
+  width: 18vw;
+}
+
+.mySwiper img {
+  width: 100%;
+  cursor: grab;
+  border-radius: 15px;
+}
+
+.mySwiper img:active {
+  cursor: grabbing;
 }
