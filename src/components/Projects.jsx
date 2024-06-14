@@ -40,6 +40,8 @@ import AlMadani6 from "../css/images/AlMadani6.png";
 import AlMadani7 from "../css/images/AlMadani7.png";
 import AlMadani8 from "../css/images/AlMadani8.png";
 
+import Medal from "../css/images/Medal.png";
+
 import Modal from "./commonStructures/Modal";
 
 // eslint-disable-next-line no-unused-vars
@@ -47,7 +49,6 @@ import SwiperCore, { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper";
 import { useState } from "react";
 
 function Projects() {
@@ -116,6 +117,7 @@ function Projects() {
               onClick={() => setModalDetails("Healio", HealioImages, "website")}
             >
               <div className="project-title">
+                <img className="medal" src={Medal} alt="" />
                 <div className="title">Healio</div>
                 <div className="title-description">
                   Your personal AI helthcare assistant

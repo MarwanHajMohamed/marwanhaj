@@ -1,0 +1,52 @@
+.achievements-page-container {
+  background-color: var(--bg);
+  padding-bottom: 50px;
+}
+
+.achievements-page-container .title {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.05cm;
+  color: var(--primary);
+  font-family: "Concert One", sans-serif;
+}
+
+.achievements-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.achievements-container .achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achievements-container .description {
+  width: 600px;
+  text-align: justify;
+  color: black;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Exo", sans-serif;
+}
+
+.achievements-container .image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.achievements-container .image-container img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 0 10px 50px rgb(0, 0, 0, 0.1);
+  border-radius: 25px;
+}

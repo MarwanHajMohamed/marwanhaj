@@ -18,7 +18,7 @@
 }
 
 .modal-container.closed {
-  transform: translateY(100vh);
+  transform: translateY(150vh);
 }
 
 .modal-container .modal {
