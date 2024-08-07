@@ -58,7 +58,8 @@
 @media (max-width: 720px) {
   .card {
     width: 400px;
-    padding: 20px 10px;
+    height: 70px;
+    padding: 10px 10px;
   }
 
   .card .left-side {
@@ -71,10 +72,10 @@
   }
 
   .card .card-title {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .card .card-text {
-    font-size: 10px;
+    font-size: 12px;
   }
 }

@@ -91,6 +91,7 @@
 
 @media (max-width: 720px) {
   .about-me-container {
+    margin: 20px 0;
     width: 400px;
   }
 
@@ -99,10 +100,14 @@
   }
 
   .about-me-container .description {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .about-me-container img {
     height: 100px;
+  }
+
+  .card-container {
+    gap: 20px;
   }
 }
