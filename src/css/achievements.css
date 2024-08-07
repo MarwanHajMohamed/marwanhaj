@@ -79,4 +79,16 @@
 }
 
 @media (max-width: 550px) {
+  .achievements-container .image-container img {
+    width: 400px;
+    height: 250px;
+  }
+
+  .achievements-container .description {
+    width: 400px;
+  }
+
+  .achievements-container .description {
+    font-size: 12px;
+  }
 }
