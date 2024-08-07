@@ -79,3 +79,11 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 500px) {
+  .card {
+    width: 350px;
+    height: 90px;
+    padding: 10px 10px;
+  }
+}
