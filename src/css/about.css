@@ -114,3 +114,9 @@
     gap: 20px;
   }
 }
+
+@media (max-width: 500px) {
+  .about-me-container .description {
+    width: 350px;
+  }
+}
