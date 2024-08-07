@@ -14,7 +14,7 @@ function Projects() {
         <div className="projects-title">Projects</div>
         <div className="projects-container">
           <div className="project-container">
-            <div className="project one">
+            <div className="project one" style={{ backgroundColor: "#d6f5ff" }}>
               <div className="project-title">
                 <img className="medal" src={Medal} alt="" />
                 <div className="title">Healio</div>
@@ -26,7 +26,7 @@ function Projects() {
                 <img src={HealioAddress} alt="" />
               </div>
             </div>
-            <div className="project two">
+            <div className="project two" style={{ backgroundColor: "#f8f8fb" }}>
               <div className="project-title">
                 <div className="title">Al Madani</div>
                 <div className="title-description">
@@ -39,7 +39,10 @@ function Projects() {
             </div>
           </div>
           <div className="project-container two">
-            <div className="project three">
+            <div
+              className="project three"
+              style={{ backgroundColor: "#c797e0" }}
+            >
               <div className="project-title">
                 <div className="title">BTM</div>
                 <div className="title-description">
@@ -50,7 +53,10 @@ function Projects() {
                 <img src={BTMAddress} alt="" />
               </div>
             </div>
-            <div className="project four">
+            <div
+              className="project four"
+              style={{ backgroundColor: "#b0fec0" }}
+            >
               <div className="project-title">
                 <div className="title">JHC</div>
                 <div className="title-description">
@@ -63,7 +69,10 @@ function Projects() {
             </div>
           </div>
           <div className="project-container three">
-            <div className="project five">
+            <div
+              className="project five"
+              style={{ backgroundColor: "#dddddd" }}
+            >
               <div className="project-title">
                 <div className="title">HecoCalc</div>
                 <div className="title-description">
@@ -74,7 +83,7 @@ function Projects() {
                 <img src={HecoCalcAddress} alt="" />
               </div>
             </div>
-            <div className="project six">
+            <div className="project six" style={{ backgroundColor: "#feb0b0" }}>
               <div className="project-title">
                 <div className="title">HecoCost</div>
                 <div className="title-description">
