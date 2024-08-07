@@ -114,7 +114,7 @@ function Projects() {
           <div className="project-container">
             <div
               className="project one"
-              onClick={() => setModalDetails("Healio", HealioImages, "website")}
+              // onClick={() => setModalDetails("Healio", HealioImages, "website")}
             >
               <div className="project-title">
                 <img className="medal" src={Medal} alt="" />
@@ -129,7 +129,7 @@ function Projects() {
             </div>
             <div
               className="project two"
-              onClick={() => setModalDetails("AlMadani", AlMadaniImages, "app")}
+              // onClick={() => setModalDetails("AlMadani", AlMadaniImages, "app")}
             >
               <div className="project-title">
                 <div className="title">Al Madani</div>
@@ -145,7 +145,7 @@ function Projects() {
           <div className="project-container two">
             <div
               className="project three"
-              onClick={() => setModalDetails("BTM", BTMImages, "website")}
+              // onClick={() => setModalDetails("BTM", BTMImages, "website")}
             >
               <div className="project-title">
                 <div className="title">BTM</div>
@@ -159,7 +159,7 @@ function Projects() {
             </div>
             <div
               className="project four"
-              onClick={() => setModalDetails("JHC", JHCImages, "website")}
+              // onClick={() => setModalDetails("JHC", JHCImages, "website")}
             >
               <div className="project-title">
                 <div className="title">JHC</div>
@@ -175,7 +175,7 @@ function Projects() {
           <div className="project-container three">
             <div
               className="project five"
-              onClick={() => setModalDetails("HecoCalc", HecoImages, "website")}
+              // onClick={() => setModalDetails("HecoCalc", HecoImages, "website")}
             >
               <div className="project-title">
                 <div className="title">HecoCalc</div>
@@ -189,7 +189,7 @@ function Projects() {
             </div>
             <div
               className="project six"
-              onClick={() => setModalDetails("HecoCost", HecoImages, "website")}
+              // onClick={() => setModalDetails("HecoCost", HecoImages, "website")}
             >
               <div className="project-title">
                 <div className="title">HecoCost</div>
