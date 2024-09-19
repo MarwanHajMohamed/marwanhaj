@@ -1,6 +1,9 @@
 .achievements-page-container {
   background-color: var(--bg);
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .achievements-page-container .title {
@@ -18,6 +21,8 @@
   justify-content: center;
   /* flex-direction: column; */
   align-items: center;
+  max-width: 1300px;
+  gap: 50px;
 }
 
 .achievements-container .achievement {

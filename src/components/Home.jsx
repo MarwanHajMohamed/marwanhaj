@@ -5,6 +5,9 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import HomeCard from "./commonStructures/HomeCard";
 import CV from "../docs/CV.pdf";
 import bg from "../css/images/bg.png";
+import About from "./About";
+import Projects from "./Projects";
+import Achievements from "./Achievements";
 
 export default function Home() {
   const [emailButton, showEmailButton] = useState(false);
@@ -64,6 +67,9 @@ export default function Home() {
           <HomeCard icon="fa-solid fa-envelope" />
         </a>
       </div>
+      <About />
+      <Projects />
+      <Achievements />
     </>
   );
 }

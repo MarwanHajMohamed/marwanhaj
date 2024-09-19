@@ -1,8 +1,10 @@
 .projects-page-container {
-  width: auto;
   padding-top: 60px;
   padding-bottom: 50px;
   background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projects-title {
@@ -18,21 +20,13 @@
   display: grid;
   gap: 40px;
   margin-top: 20px;
+  width: 1500px;
 }
 
 .projects-container .project-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  margin: 0 30px;
-  gap: 30px;
-}
-
-.projects-container .project-container.two {
-  grid-template-columns: 1fr 2fr;
-}
-
-.projects-container .project-container.three {
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projects-container .project {
@@ -42,60 +36,36 @@
   position: relative;
   overflow: hidden;
   transition: 200ms ease-in-out;
+  cursor: pointer;
+  width: 1200px;
+  background-color: white;
 }
 
-.projects-container .project.three,
-.projects-container .project.four {
-  height: 500px;
+.projects-container .project.Al.Madani .project-image img {
+  width: 400px;
+  bottom: -350px;
 }
 
-.projects-container .project.five,
-.projects-container .project.six {
-  height: 400px;
-}
-
-.projects-container .project:not(.project.two) .project-image img {
+.projects-container .project:not(.project.Al.Madani) .project-image img {
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
 }
 
 .projects-container .project .project-image img {
   width: 900px;
   position: absolute;
-  left: 60px;
+  left: 50%;
   bottom: -40px;
+  transform: translate(-50%, 0);
   border-radius: 15px;
   transition: 200ms ease-in-out;
 }
 
-.projects-container .project.two .project-image img {
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 400px;
-  bottom: -350px;
+.projects-container .project:hover .project-image img {
+  bottom: -30px;
 }
 
-.projects-container .project.three .project-image img {
-  width: 900px;
-  bottom: -100px;
-  left: 30px;
-}
-
-.projects-container .project.four .project-image img {
-  width: 900px;
-  bottom: -130px;
-  left: 60px;
-}
-
-.projects-container .project.five .project-image img {
-  width: 710px;
-  bottom: -90px;
-  left: 90px;
-}
-
-.projects-container .project.six .project-image img {
-  width: 710px;
-  bottom: -100px;
-  left: 90px;
+.projects-container .project.Al.Madani:hover .project-image img {
+  bottom: -340px;
 }
 
 .projects-container .project .project-description {
@@ -107,16 +77,21 @@
 .projects-container .project .project-title {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   margin: 20px 40px;
   position: relative;
 }
 
 .projects-container .project .project-title .medal {
   position: absolute;
-  left: 0;
+  right: 0;
   width: 40px;
   top: 10px;
+  display: none;
+}
+
+.projects-container .project .project-title .medal.Healio {
+  display: block;
 }
 
 .projects-container .project .project-title .title-description {
@@ -130,21 +105,58 @@
   letter-spacing: -2px;
 }
 
-@media (max-width: 1300px) {
-  .projects-container .project.two .project-image img {
-    width: 300px;
-    bottom: -150px;
+@media (max-width: 1320px) {
+  .projects-container .project {
+    width: 900px;
+    height: 400px;
+  }
+
+  .projects-container .project .project-image img {
+    width: 600px;
+  }
+
+  .projects-container .project.project.Al.Madani .project-image img {
+    width: 250px;
+    bottom: -230px;
+  }
+
+  .projects-container .project.project.Al.Madani:hover .project-image img {
+    bottom: -220px;
   }
 }
 
-@media (max-width: 1160px) {
-  .projects-container .project {
-    width: 100%;
+/* @media (max-width: 1100px) {
+  .projects-container .project.Al.Madani .project-image img {
+    width: 300px;
+    bottom: -150px;
   }
 
-  .projects-container .project-container {
-    display: flex;
-    flex-direction: column;
+  .projects-container .project.Al.Madani:hover .project-image img {
+    bottom: -140px;
+  }
+} */
+
+@media (max-width: 1000px) {
+  .projects-container .project {
+    width: 500px;
+    height: 300px;
+  }
+
+  .projects-container .project .project-image img {
+    width: 400px;
+  }
+
+  .projects-container .project.project.Al.Madani .project-image img {
+    width: 200px;
+    bottom: -200px;
+  }
+
+  .projects-container .project.project.Al.Madani:hover .project-image img {
+    bottom: -190px;
+  }
+
+  .projects-container .project .title {
+    font-size: 2rem;
   }
 }
 
@@ -155,10 +167,6 @@
 }
 
 @media (max-width: 780px) {
-  .projects-container .project .title {
-    font-size: 2rem;
-  }
-
   .projects-title {
     font-size: 3rem;
   }

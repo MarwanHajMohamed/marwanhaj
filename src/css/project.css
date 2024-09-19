@@ -1,0 +1,24 @@
+.project-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.project-page-container .wrapper {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-page-container .project-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.project-page-container hr {
+  width: 100%;
+  color: black;
+  border: 1px solid;
+}
