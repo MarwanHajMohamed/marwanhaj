@@ -165,6 +165,13 @@
   }
 }
 
+@media (max-width: 768px) {
+  .modal-content {
+    height: 85vh;
+    box-shadow: 0px -50px 20px var(--bg);
+  }
+}
+
 @media (max-width: 590px) {
   .modal-content .content .skills .skill {
     font-size: 12px;
