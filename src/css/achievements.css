@@ -16,7 +16,6 @@
 .achievements-page-container .title {
   font-size: clamp(2rem, 5vw, 4rem);
   width: 100%;
-  /* text-align: center; */
   font-weight: 700;
   letter-spacing: -0.05cm;
   color: var(--primary);
@@ -39,7 +38,6 @@
 .achievements-container .description {
   text-align: justify;
   color: #25594e;
-  /* font-size: 20px; */
   font-weight: 400;
 }
 
@@ -67,6 +65,10 @@
 }
 
 @media (max-width: 660px) {
+  .achievements-container .achievement {
+    gap: 20px;
+  }
+
   .achievements-container .image-container {
     margin-top: 20px;
   }
