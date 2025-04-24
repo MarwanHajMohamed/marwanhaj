@@ -4,9 +4,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Modal } from "./commonStructures/Modal";
 
-import JaceenHealth from "../css/images/JaceenHealth.png";
-import JaceenHealth2 from "../css/images/JaceenHealth2.png";
-import JaceenHealth3 from "../css/images/JaceenHealth3.png";
+import Healio from "../css/images/Healio1.png";
+import Healio2 from "../css/images/Healio2.png";
+import Healio3 from "../css/images/Healio3.png";
+import Healio4 from "../css/images/Healio4.png";
+import Healio5 from "../css/images/Healio5.png";
+import Healio6 from "../css/images/Healio6.png";
+import Healio7 from "../css/images/Healio7.png";
 
 const projects = [
   {
@@ -20,11 +24,12 @@ const projects = [
       "Developed RESTful API endpoints in Python using Flask, enabling the frontend to access the model for disease prediction, ensuring efficient and accurate data communication.",
       "Stored user details and conversations using Spring Boot and MySQL to personalise user experiences and improve system performance, enhancing engagement and retention.",
     ],
-    images: [JaceenHealth, JaceenHealth2, JaceenHealth3],
+    images: [Healio, Healio2, Healio3, Healio4, Healio5, Healio6, Healio7],
     paragraphs: [
-      "I collaborated with a healthcare company to design and develop a full-featured e-commerce web application using the MERN (MongoDB, Express.js, React, Node.js) stack along with TypeScript. My role encompassed both frontend and backend responsibilities, ensuring seamless integration between user-facing interfaces and server-side logic. The goal was to create a robust and scalable platform that could handle dynamic product listings, user management, and secure transactions, all while maintaining a clean and intuitive user experience tailored to the healthcare domain.",
-      "To enhance performance and reduce unnecessary backend strain, I implemented effective caching strategies across the application. This optimization significantly improved product loading times by minimizing redundant API calls, resulting in a 40% reduction in backend requests. These changes not only boosted overall site responsiveness but also contributed to better resource allocation on the server side, especially during high-traffic periods.",
-      "In addition, I engineered a secure role-based access control system for both users and administrators. Leveraging JWT (JSON Web Tokens) for authentication and authorization, I ensured that sensitive operations were properly gated based on user roles. I also utilized React's Context API to manage authentication state and role-specific UI rendering throughout the app, allowing for a more maintainable and scalable approach to state management across different components and user journeys.",
+      "I developed a Random Forest Classification model to predict diseases based on user-provided symptoms, combining machine learning and frontend development to create a seamless, interactive experience. The model was trained on a structured dataset and integrated into a user-friendly React interface, allowing users to input symptoms and receive real-time predictions about potential conditions. This project aimed to provide quick, accessible health insights and demonstrate how AI can be used in early diagnosis support tools.",
+      "To enhance the model's usability, I implemented a custom algorithm in Python capable of extracting symptoms from free-text input. This natural language processing component allowed the system to interpret user entries more flexibly and realistically, achieving an 80% accuracy rate through rigorous testing and optimization. By enabling the system to handle varied user input styles, it significantly improved the accessibility and accuracy of predictions.",
+      "I also developed RESTful API endpoints using Flask to serve the model's predictions to the frontend efficiently. These endpoints handled data transmission securely and reliably, ensuring accurate and low-latency communication between the client-side interface and the backend logic. This architecture provided a robust foundation for scalable deployment and integration.",
+      "To support personalization and performance, I used Spring Boot and MySQL to store user details and track user conversations. This enabled tailored user experiences and data-driven improvements in system behavior, ultimately enhancing both engagement and user retention. By integrating multiple technologies across the stack, the project demonstrated the power of combining machine learning, web development, and backend engineering in solving real-world problems.",
     ],
     type: "desktop",
   },
@@ -41,9 +46,10 @@ const projects = [
     ],
     images: [],
     paragraphs: [
-      "I partnered with a dermatology company to design and launch a web application built with React, tailored specifically to their business needs and customer base. This collaboration led to the successful acquisition of over 15 new customers shortly after launch, demonstrating the effectiveness of the platform in driving engagement and conversions. My focus was on delivering a user-friendly interface that reflected the brand's professionalism and helped streamline the online experience for prospective clients.",
-      "One of the standout features I developed was an interactive sliding line component to display before-and-after images of patients. This feature allowed users to visually compare treatment results in real time by dragging a slider across the image. It was designed to be lightweight, intuitive, and fully responsive, giving potential clients a compelling, trust-building visual demonstration of the clinic’s results. The slider significantly increased user engagement on treatment pages and was praised by the client for its simplicity and effectiveness.",
-      "To ensure a smooth user experience across all devices and browsers, I prioritized responsive design and cross-browser compatibility. I rigorously tested the application on various screen sizes and platforms, refining layouts and interactions to meet modern accessibility standards. The result was a polished, mobile-first web experience that provided users with reliable performance and an intuitive interface, regardless of how they accessed the site.",
+      "I built a full-stack web application designed to foster collaboration by allowing users to post, share, and rate academic notes. The platform empowered students to contribute and access study materials, creating a community-driven ecosystem that promoted knowledge sharing and peer feedback. With a focus on usability and engagement, the application encouraged interaction through rating systems and easy content discovery.",
+      "To support the application’s core functionality, I developed RESTful APIs that handled user authentication, note management, and rating submissions. These APIs ensured smooth communication between the frontend and backend, enabling real-time interactions and secure data transactions. By adhering to REST principles, the architecture remained scalable, maintainable, and easy to integrate with new features.",
+      "I worked closely with a team of developers in an agile environment, participating in daily standups, sprint planning sessions, and iterative feedback cycles. I also collaborated with stakeholders to gather and refine requirements, ensuring the final product aligned with user needs and business goals. This close cooperation facilitated quick adjustments and helped maintain a clear project vision throughout development.",
+      "To ensure code quality and system reliability, I wrote and conducted over 30 unit tests across various components. These tests validated the system under a range of conditions, helping to catch edge cases early and improve overall robustness. The testing strategy played a key role in maintaining confidence in the application’s performance as it evolved.",
     ],
     type: "desktop",
   },
@@ -60,9 +66,10 @@ const projects = [
     ],
     images: [],
     paragraphs: [
-      "I co-launched BTM, a university consultancy service aimed at providing technical and strategic support to startups and small-to-medium enterprises. Working alongside a team of three engineers in an agile environment, I contributed to the development of the platform using React. The consultancy offered tailored web solutions and technical insights to early-stage companies, helping them establish their digital presence and streamline their operations. Our agile workflow allowed us to iterate quickly based on client needs and feedback, ensuring that the solutions we delivered were both effective and user-centric.",
-      "As part of our consultancy work, I led the delivery of three full-featured web applications—HecoCalc, HecoCost, and HecoRep—for a client called HecoAnalytics. These tools provided specialized analytics, reporting, and cost estimation functionalities designed to meet the needs of their customers. By enhancing the overall functionality and usability of their digital tools, we were able to drive a 30% increase in customer satisfaction. Each application was built with performance, scalability, and intuitive UX in mind, helping the client stand out in a competitive data analytics space.",
-      "Throughout the development process, I actively participated in code reviews, sprint planning sessions, and regular user feedback meetings. These practices fostered a highly collaborative environment that emphasized code quality, continuous improvement, and responsiveness to user needs. My involvement in both technical execution and team coordination contributed to the overall success and timely delivery of our projects.",
+      "As part of a first-year university project, I collaborated with a team to design and develop an Airport Simulation System, following the Waterfall development methodology. This structured approach allowed us to move through clearly defined stages of development, from initial planning to deployment and maintenance. The simulation aimed to model the operation of an airport environment, including key elements such as flight scheduling, seat selection, and booking meals.",
+      "My contributions began with conducting detailed requirements analysis and system design sessions, during which we defined the scope, use cases, and core functionalities of the system. This early planning ensured that our solution addressed all necessary components of the simulation while staying within the project’s academic constraints.",
+      "We implemented the application using Java, utilizing the Standard Widget Toolkit (SWT) to build a graphical user interface. The result was an interactive simulation environment that allowed users to visualize and engage with various airport operations in real time. The use of SWT provided a responsive and native-looking UI, enhancing the overall user experience.",
+      "To ensure the system functioned as intended, I performed both unit and system testing on the simulation logic and interface. These tests helped identify and resolve bugs, and we continued refining the application during the maintenance phase based on testing feedback. This experience reinforced my understanding of software development lifecycles and the importance of rigorous testing and documentation.",
     ],
     type: "desktop",
   },
