@@ -22,7 +22,7 @@ export default function Home() {
     const pdfUrl = CV;
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "CV_Marwan.pdf"; // specify the filename
+    link.download = "CV_Marwan.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -34,30 +34,16 @@ export default function Home() {
       <div className="page-container" id="home">
         <div className="intro-wrapper">
           <div className="title">Hi, I'm Marwan</div>
+          <div className="description">
+            I just delivered a scalable e-commerce app for a healthcare client
+            using the <span>MERN</span> stack and was awarded at Brunel for an
+            <span> AI healthtech</span> project. I’d love to bring that same
+            energy to your team!
+          </div>
           <div className="button-container">
-            <button onClick={downloadResume}>Download Resume</button>
+            {/* <button onClick={downloadResume}>Download Resume</button> */}
           </div>
         </div>
-
-        {/* <div className="description-wrapper">
-          <div className="hc">
-            <a href={"mailto:marwan.khaj@hotmail.com"}>
-              <HomeCard icon="fa-solid fa-envelope" />
-            </a>
-          </div>
-
-          <div className="hc">
-            <a href="https://www.linkedin.com/in/marwan-haj-mohamed-305578218/">
-              <HomeCard icon="fa-brands fa-linkedin" />
-            </a>
-          </div>
-
-          <div className="hc">
-            <a href="https://github.com/MarwanHajMohamed">
-              <HomeCard icon="fa-brands fa-github" />
-            </a>
-          </div>
-        </div> */}
       </div>
       <div className={emailButton ? "scrollEmail emailButton" : "scrollEmail"}>
         <a href={"mailto:marwan.khaj@hotmail.com"}>

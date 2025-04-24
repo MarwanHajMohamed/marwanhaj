@@ -4,123 +4,63 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #25594e;
+  padding-bottom: 50px;
+}
+
+.about-container .wrapper {
+  width: 90vw;
+  max-width: 1200px;
 }
 
 .about-title {
-  font-size: 4rem;
-  text-align: center;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 700;
   letter-spacing: -0.05cm;
   color: var(--primary);
   font-family: "Concert One", sans-serif;
 }
 
-.about-me-container {
+.about-container .wrapper .description-container {
   display: flex;
-  width: 1000px;
-  align-items: center;
-  margin-bottom: 60px;
+  gap: 100px;
 }
 
-.about-me-container img {
-  height: 200px;
-  border-radius: 50%;
-  box-shadow: 0 0 200px rgb(0, 0, 0, 0.1);
-}
-
-.about-me-container .description-container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 30px;
-}
-
-.about-me-container .description-container .description.name {
-  font-weight: 800;
-  font-size: 2.2rem;
-}
-
-.about-me-container .description {
-  display: flex;
-  font-size: 20px;
-  letter-spacing: -0.03cm;
-  color: rgb(99, 143, 103);
+.about-container .wrapper .description {
   text-align: justify;
 }
 
-.card-container {
+.about-container .wrapper .skills {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
-@media (max-width: 1100px) {
-  .about-me-container {
-    width: 800px;
-  }
-
-  .about-me-container .description-container .description.name {
-    font-size: 1.8rem;
-  }
-
-  .about-me-container .description {
-    font-size: 1rem;
-  }
+.about-container .wrapper .skills .section .title {
+  font-weight: 700;
+  font-family: "Concert One", sans-serif;
+  /* font-size: 2rem; */
+  font-size: clamp(24px, 5vw, 40px);
 }
 
-@media (max-width: 900px) {
-  .about-title {
-    font-size: 3rem;
-  }
-
-  .about-me-container {
-    width: 600px;
-  }
-
-  .about-me-container .description-container .description.name {
-    font-size: 1.3rem;
-  }
-
-  .about-me-container .description {
-    font-size: 12px;
-  }
-
-  .about-me-container img {
-    height: 100px;
+@media (max-width: 1000px) {
+  .about-container .wrapper .description-container {
+    gap: 30px;
   }
 }
 
-@media (max-width: 720px) {
-  .about-me-container {
-    margin: 20px 0;
-    gap: 20px;
-    display: flex;
+@media (max-width: 1000px) {
+  .about-container .wrapper .description-container {
     flex-direction: column;
-    width: 400px;
   }
 
-  .about-me-container .description-container {
-    margin-left: 0;
-  }
-
-  .about-me-container .description-container .description.name {
-    font-size: 1rem;
-  }
-
-  .about-me-container .description {
-    font-size: 12px;
-  }
-
-  .about-me-container img {
-    height: 100px;
-  }
-
-  .card-container {
-    gap: 20px;
+  .about-container .wrapper .skills {
+    flex-direction: row;
   }
 }
 
-@media (max-width: 500px) {
-  .about-me-container .description {
-    width: 350px;
+@media (max-width: 420px) {
+  .about-container .wrapper .skills {
+    flex-direction: column;
   }
 }

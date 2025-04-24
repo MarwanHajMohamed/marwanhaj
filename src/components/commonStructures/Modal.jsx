@@ -1,57 +1,77 @@
-import React, { useEffect } from "react";
 import "../../css/modal.css";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
-// eslint-disable-next-line no-unused-vars
-import SwiperCore, { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper";
+export const Modal = ({ project, onClose }) => {
+  if (!project) return null;
 
-export default function Modal({ title, images, type, open, setOpen }) {
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        setOpen(false);
-      }
-    };
-    if (open) {
-      document.addEventListener("keydown", handleKeyDown);
-    }
+  const items = project.images.map((image, index) => (
+    <div className="carousel-item">
+      <img
+        key={index}
+        src={image}
+        className={
+          project.type === "desktop" ? "desktop-image" : "mobile-image"
+        }
+        onDragStart={(e) => e.preventDefault()}
+        style={{ width: "100%", height: "auto" }}
+      />
+    </div>
+  ));
 
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [open]);
   return (
-    <div className={open ? "modal-container open" : "modal-container closed"}>
-      <div className="close-container">
-        <div className="close" onClick={() => setOpen(false)}>
-          <i class="fa-solid fa-circle-xmark"></i>
-        </div>
-      </div>
-      <div className={type === "website" ? "modal website" : "modal app"}>
-        <div className="title-container">
-          <div className="title">{title}</div>
-        </div>
-        <div className="description-container">
-          <div className="images-container">
-            <Swiper
-              navigation={true}
-              modules={[Navigation, Pagination]}
-              className="mySwiper"
-            >
-              {images.map((image) => {
-                return (
-                  <SwiperSlide>
-                    <img src={image} alt="" />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="content">
+          <button className="close-button" onClick={onClose}>
+            X
+          </button>
+          {project.images.length !== 0 && (
+            <AliceCarousel
+              items={items}
+              mouseTracking
+              renderPrevButton={({ isDisabled }) => (
+                <button
+                  className={`custom-arrow left ${
+                    isDisabled ? "disabled" : ""
+                  }`}
+                  disabled={isDisabled}
+                >
+                  &lt;
+                </button>
+              )}
+              renderNextButton={({ isDisabled }) => (
+                <button
+                  className={`custom-arrow right ${
+                    isDisabled ? "disabled" : ""
+                  }`}
+                  disabled={isDisabled}
+                >
+                  &gt;
+                </button>
+              )}
+            />
+          )}
+          <div className="project-title">{project.title}</div>
+          <div className="project-name">{project.name}</div>
+          <div className="date">{project.date}</div>
+          <div className="skills">
+            {project.skills.map((skill, i) => (
+              <span className="skill" key={i}>
+                {skill}
+              </span>
+            ))}
+          </div>
+          <div className="project-paragraphs">
+            {project.paragraphs.map((par, i) => (
+              <div key={i}>
+                <div>{par}</div>
+                <br />
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
-}
+};

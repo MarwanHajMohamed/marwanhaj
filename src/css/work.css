@@ -1,0 +1,171 @@
+.projects-page-container {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+}
+
+.projects-container {
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 28px;
+  width: 6px;
+  z-index: 0;
+  background: linear-gradient(180deg, #25594e 0%, #f2f2ce 100%);
+  border-radius: 3px;
+}
+
+.project .circle {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 20px;
+  aspect-ratio: 1;
+  background-color: #25594e;
+  border: 5px solid #f2f2ce;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #25594e;
+  z-index: 2;
+}
+
+.projects-page-container .wrapper {
+  width: 90vw;
+  max-width: 1200px;
+  position: relative;
+}
+
+.projects-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.05cm;
+  color: var(--primary);
+  font-family: "Concert One", sans-serif;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.projects-container .project {
+  position: relative;
+  transition: 200ms ease-in-out;
+}
+
+.projects-container .project .project-title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  font-family: "Concert One", sans-serif;
+  color: var(--primary);
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.projects-container .project .date {
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #909090;
+}
+
+.projects-container .project .title {
+  font-size: clamp(24px, 5vw, 40px);
+  font-weight: 700;
+}
+
+.projects-container .project .project-name {
+  background-color: #dcdcbb;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.projects-container .project .project-description {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 10px;
+  text-align: justify;
+}
+
+.projects-container .project .project-title .date-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.projects-container .project .project-title button {
+  width: 80px;
+  background-color: #25594e;
+  border: 0;
+  color: white;
+  padding: 8px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 100ms ease-in-out;
+}
+
+.projects-container .project .project-title button:hover {
+  background-color: #1a4038;
+}
+
+.projects-container .project .skills {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.projects-container .project .skills .skill {
+  background-color: #dcdcbb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 750px) {
+  .project .circle {
+    top: 5px;
+    left: 20px;
+    width: 10px;
+  }
+}
+
+@media (max-width: 590px) {
+  .projects-container .project .skills .skill {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 460px) {
+  .projects-container .project .project-name {
+    font-size: 14px;
+  }
+
+  .projects-container .project .project-title .date-button .date {
+    font-size: 12px;
+  }
+
+  .projects-container .project .project-title button {
+    width: 60px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .project-description {
+    padding: 0 0 0 10px;
+  }
+}

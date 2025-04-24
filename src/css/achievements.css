@@ -1,11 +1,22 @@
 .achievements-page-container {
   background-color: var(--bg);
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achievements-page-container .wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 1200px;
 }
 
 .achievements-page-container .title {
-  font-size: 4rem;
-  text-align: center;
+  font-size: clamp(2rem, 5vw, 4rem);
+  width: 100%;
+  /* text-align: center; */
   font-weight: 700;
   letter-spacing: -0.05cm;
   color: var(--primary);
@@ -13,27 +24,23 @@
 }
 
 .achievements-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  /* flex-direction: column; */
   align-items: center;
 }
 
 .achievements-container .achievement {
   display: flex;
-  flex-direction: column;
+  gap: 50px;
   align-items: center;
 }
 
 .achievements-container .description {
-  width: 600px;
   text-align: justify;
-  color: black;
-  margin-top: 20px;
-  font-size: 20px;
+  color: #25594e;
+  /* font-size: 20px; */
   font-weight: 400;
-  font-family: "Exo", sans-serif;
 }
 
 .achievements-container .image-container {
@@ -52,43 +59,20 @@
 }
 
 @media (max-width: 1300px) {
+  .achievements-container .achievement {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 660px) {
+  .achievements-container .image-container {
+    margin-top: 20px;
+  }
+
   .achievements-container .image-container img {
-    width: 500px;
-    height: 350px;
-  }
-
-  .achievements-container .description {
-    width: 500px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .achievements-container {
-    grid-template-columns: 1fr;
-  }
-
-  .achievements-container .description {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 900px) {
-  .achievements-page-container .title {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 550px) {
-  .achievements-container .image-container img {
-    width: 400px;
-    height: 250px;
-  }
-
-  .achievements-container .description {
-    width: 400px;
-  }
-
-  .achievements-container .description {
-    font-size: 12px;
+    width: 90%;
+    height: auto;
   }
 }
